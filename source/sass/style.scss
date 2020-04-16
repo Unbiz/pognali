@@ -1,3 +1,34 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
 
+body {
+  font-family: 'Bloggersans', sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
 
-@import 'blocks/header';
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import 'blocks/wrapper';
+@import 'blocks/page-header';
+@import 'blocks/main-menu';
+@import 'blocks/main-title';
+@import 'blocks/roadmap';
+@import 'blocks/about-service';
+@import 'blocks/directions';
+@import 'blocks/companions';
+@import 'blocks/button';

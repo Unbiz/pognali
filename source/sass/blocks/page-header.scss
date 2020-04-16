@@ -1,0 +1,24 @@
+.page-header {
+  background-color: $white;
+}
+
+.page-header__top-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0 22px 0;
+
+
+
+}
+
+.page-header__logo {
+  width: 100px;
+}
+
+.page-header__toggle-open {
+  display: none;
+}
+
+.page-header__toggle-close {
+  display: none;
+}

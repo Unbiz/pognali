@@ -1,0 +1,83 @@
+.main-title-up {
+  background-color: $blue_1;
+  padding-top: 25px;
+  background-image:
+    url(../img/traveller-illustration-mobile@1x.png),
+    url(../img/globe-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 15px) 160px,
+  center -50px;
+}
+
+.main-title {
+  background-color: $blue_1;
+  background-image: linear-gradient(transparent 282px, $blue_2 150px);
+}
+
+.main-title__wrapper {
+  position: relative;
+}
+
+.main-title__title {
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 0 15px 270px 15px;
+}
+
+.main-title__contacts  {
+  @include list-default;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  top: -20px;
+  margin-bottom: 5px;
+}
+
+.main-title__contacts-item--login {
+  flex-grow: 2;
+}
+
+.main-title__contacts-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  &--phone {
+    background-color: $orange_1;
+  }
+
+  &--email {
+    background-color: $orange_3;
+  }
+
+  &--login {
+    width: 100%;
+    background-color: $orange_4;
+    border-radius: 20px;
+    color: $blue_1;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.main-title__review {
+  padding-left: 25px;
+  width: 160px;
+  margin-bottom: 32px;
+}
+
+.main-title__blockquote {
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.main-title__author {
+  font-weight: 700;
+}
