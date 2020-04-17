@@ -1,6 +1,11 @@
 .companions {
   padding: 100px 0 30px 0;
   background-color: $blue_2;
+  background-image: url(../img/smolov-back-desktop@1x.png),
+                    url(../img/rogovaya-back-mobile@1x.png)
+                    ;
+  background-repeat: no-repeat;
+  background-position: 150px 70px, -10px 340px;
   position: relative;
   top: -60px;
   width: 320px;
@@ -12,6 +17,7 @@
 
 .companions__info {
   position: relative;
+  margin-bottom: 58px;
 }
 
 .companoins__title {
@@ -37,5 +43,12 @@
 
 .companions__show-all {
   position: absolute;
-  top: 800px;
+  top: 1160px;
+}
+
+.companions__cards {
+  @include list-default;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 72px;
 }

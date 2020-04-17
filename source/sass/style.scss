@@ -11,6 +11,7 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   margin: 0;
+  position: relative;
 }
 
 a {
@@ -23,6 +24,11 @@ img {
   height: auto;
 }
 
+.page-main {
+  position: relative;
+}
+
+@import 'blocks/button';
 @import 'blocks/wrapper';
 @import 'blocks/page-header';
 @import 'blocks/main-menu';
@@ -31,4 +37,10 @@ img {
 @import 'blocks/about-service';
 @import 'blocks/directions';
 @import 'blocks/companions';
-@import 'blocks/button';
+@import 'blocks/companion-card';
+@import 'blocks/add-profile';
+@import 'blocks/business-modal';
+@import 'blocks/login';
+@import 'blocks/location';
+@import 'blocks/map.scss';
+@import 'blocks/page-footer';
