@@ -1,0 +1,42 @@
+.catalog-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: $blue_1;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 10;
+}
+
+.catalog-title__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-title__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.catalog-title__title {
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0 0 8px 0;
+}
+
+.catalog-title__title-underline {
+  position: relative;
+  height: 5px;
+  background-color: $orange_1;
+  border-radius: 2px;
+  bottom: -2px;
+}
+
+.catalog-title__to-main {
+  display: none;
+}
+

@@ -8,16 +8,22 @@
 </head>
 <body>
 
-  <header class="page-header">
+  <header class="page-header page-header--close">
 
     <div class="page-header__wrapper wrapper">
-      <a href="#" class="page-header__logo">
-        <img src="img/logo-mobile-white@1x.png" alt="Pognali logo">
-      </a>
-      <a href="#" class="page-header__toggle">
-        <img src="img/menu.svg" alt="Open menu" width="25" height="11">
-      </a>
-      <div class="main-menu">
+      <div class="page-header__top-menu page-header__top-menu--close page-header__top-menu--scroll">
+        <a href="#" class="page-header__logo">
+          <img src="img/logo-mobile-white@1x.png" alt="Pognali logo"
+            class="page-header__logo-img page-header__logo-img--white">
+          <img src="img/logo-mobile-blue@1x.png" alt="Pognali logo" class="page-header__logo-img">
+        </a>
+        <a href="#" class="page-header__toggle">
+          <img src="img/menu.svg" alt="Open menu" width="25" height="11"
+            class="page-header__toggle-open page-header__toggle-open--enable">
+          <img src="img/close.svg" alt="Close menu" width="19" height="19" class="page-header__toggle-close">
+        </a>
+      </div>
+      <div class="main-menu main-menu--block">
         <ul class="main-menu__list">
           <li class="main-menu__list-item"><a href="#">О сервисе</a></li>
           <li class="main-menu__list-item"><a href="form.html">Направления</a></li>
@@ -28,37 +34,36 @@
             <a href="#" class="main-menu__login login-button">Авторизация</a>
           </li>
           <li class="main-menu__contacts-item">
-            <img src="img/contacts-phone.svg" alt="Phone" class="main-menu__phone-image" width="45" height="45">
-            <a href="tel:+78005558628" class="main-menu__phone-number">8 800 555-86-28</a>
+            <a href="tel:+78005558628" class="main-menu__contacts-item-icon">
+              <img src="img/contacts-phone.svg" alt="Phone" class="main-menu__contacts-image" width="18" height="18">
+            </a>
+            <a href="tel:+78005558628" class="main-menu__contacts-item-text">8 800 555-86-28</a>
           </li>
           <li class="main-menu__contacts-item">
-            <img src="img/contacts-mail.svg" alt="Phone" class="main-menu__email-image" width="45" height="45">
-            <a href="mailto:mail@htmlacademy.ru" class="main-menu__email">mail@htmlacademy.ru</a>
+            <a href="mailto:mail@htmlacademy.ru" class="main-menu__contacts-item-icon">
+              <img src="img/contacts-mail.svg" alt="Email" class="main-menu__contacts-image" width="18" height="13">
+            </a>
+            <a href="mailto:mail@htmlacademy.ru" class="main-menu__contacts-item-text">mail@htmlacademy.ru</a>
           </li>
         </ul>
         <ul class="main-menu__social">
-          <li class="main-menu__social_item">
-            <img src="img/facebook.svg" alt="Facebook" width="11" height="20">
+          <li class="main-menu__social-item">
+            <a href="#" class="main-menu__social-item-link">
+              <img src="img/facebook.svg" alt="Facebook" width="11" height="20">
+            </a>
           </li>
-          <li class="main-menu__social_item">
-            <img src="img/vk.svg" alt="VK" width="23" height="12">
+          <li class="main-menu__social-item">
+            <a href="#" class="main-menu__social-item-link">
+              <img src="img/vk.svg" alt="VK" width="23" height="12">
+            </a>
           </li>
-          <li class="main-menu__social_item">
-            <img src="img/instagram.svg" alt="Instagram" width="18" height="18">
+          <li class="main-menu__social-item">
+            <a href="#" class="main-menu__social-item-link">
+              <img src="img/instagram.svg" alt="Instagram" width="18" height="18">
+            </a>
           </li>
         </ul>
       </div>
-      <ul class="page-header__contacts">
-        <li class="page-header__contacts-item page-header__contacts-item--phone">
-          <img src="img/topmenu-phone.svg" alt="Phone" class="page-header__phone-image" width="45" height="45">
-        </li>
-        <li class="page-header__contacts-item page-header__contacts-item--email">
-          <img src="img/topmenu-mail.svg" alt="Phone" class="page-header__email-image" width="45" height="45">
-        </li>
-        <li class="page-header__contacts-item page-header__contacts-item--login">
-          <a href="#" class="page-header__login login-button">Авторизация</a>
-        </li>
-      </ul>
     </div>
 
   </header>
@@ -71,10 +76,12 @@
           <h1 class="catalog-title__title">Попутчики</h1>
            <div class="catalog-title__title-underline"></div>
         </div>
-        <a href="index.html" class="catalog-title__to-main">
-          <span class="catamlg-title_to-main-text">На главную</span>
-          <img src="img/return.svg" alt="Back arrow" width="32" height="16">
-        </a>
+        <div class="catalog-title__to-main">
+          <a href="index.html" class="catamlg-title_to-main-text">На главную</a>
+          <a href="" class="catalog-title__to-main-img">
+            <img src="img/return.svg" alt="Back arrow" width="32" height="16">
+          </a>
+        </div>
       </div>
     </section>
 
@@ -83,11 +90,23 @@
         <div class="filter__menu">
           <div class="filter__menu-left">
             <a href="#" class="filter_more-button">
-              <img src="img/filter.svg" alt="More button" class="filter__more-img" width="23" height="15">
+              <img src="img/filter.svg" alt="More button" class="filter__more-img" width="15" height="10">
             </a>
-            <h2 class="filter__title">Фильтрация по странам<span class="filter__colon">:</span></h2>
-            <ul class="filter__country-menu">
-              <li class="filter_country-menu-item">
+            <h2 class="filter__title">Фильтрация по странам<span class="filter__title-colon">:</span></h2>
+            <div class="filter__menu-right">
+              <a href="#" class="filter__menu-right-icon">
+                <img src="img/close.svg" alt="Close button" class="filter__menu-right-icon-img" width="12" height="12">
+              </a>
+              <a href="#" class="filter__menu-right-text">Свернуть</a>
+            </div>
+            <div class="filter__menu-right-collapse">
+              <a href="#" class="filter__menu-right-collapse-link">
+                <span class="filter__menu-right-collapse-text">Показать все</span>
+              </a>
+              <img src="img/dots.svg" alt="" class="filter__menu-right-collapse-dots" width="27" height="5">
+            </div>
+            <ul class="filter__country-menu filter__country-menu--close">
+              <li class="filter_country-menu-item filter_country-menu-item--active">
                 <a href="#" class="filter_country-menu-link">Европа</a>
               </li>
               <li class="filter_country-menu-item">
@@ -101,20 +120,12 @@
               </li>
             </ul>
           </div>
-          <div class="filter__collapse">
-            <span class="filter__collapse-text">Свернуть</span>
-            <img src="img/close.svg" alt="Collapse img" class="filter__collapse-img" width="18" height="18">
-          </div>
-          <div class="filter__menu-right">
-            <span class="filter__menu-right-text">Показать все</span>
-            <img src="img/dots.svg" alt="" class="filter__menu-right-dots" width="27" height="5">
-          </div>
         </div>
-        <div class="filter__table-block">
+        <div class="filter__table-block filter__table-block--close">
           <ul class="filter__table-list">
-            <li class="filter__table-item">
-              <div class="filter__table-letter">а</div>
-              <ul class="filter__table-country-list">
+            <li class="filter__table-item filter__table-item--active">
+              <a class="filter__table-letter">а</a>
+              <ul class="filter__table-country-list filter__table-country-list--active">
                 <li class="filter__country-item"><a href="europe/afganistan" class="filter__country-link">Австрия</a></li>
                 <li class="filter__country-item"><a href="europe/afganistan" class="filter__country-link">Азербайджан</a></li>
                 <li class="filter__country-item"><a href="europe/afganistan" class="filter__country-link">Албания</a></li>
@@ -445,260 +456,365 @@
             </li>
           </ul>
         </div>
-        <div class="filter__close-button">
-          <img src="img/close.svg" alt="Close button" width="19" height="19">
+        <a href="#" class="filter__close-button filter__close-button--close">
+          <img src="img/close.svg" alt="Close button" width="12" height="12">
           <div class="filter__close-text">Свернуть</div>
-        </div>
+        </a>
       </div>
     </section>
 
     <section class="choice-companion">
-      <div class="choise-companion__wrapper wrapper">
+      <div class="choice-companion__wrapper wrapper">
         <ul class="choice-companion__cards-list">
-          <li class="choice-companion__card companion-card">
-            <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="companion-card__foto">
-            <h3 class="companion-card__name">Таня Фирсова</h3>
-            <div class="companion-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</div>
-            <ul class="companion-card__country-list">
-              <li class="companion-card__country-item">
-                <img src="img/flag-sri-lanka.svg" alt="Flag Shri-lanka" class="companion-card__country-img" width="36" height="24">
-                <div class="companion-card_country-name">Шри Ланка</div>
-              </li>
-              <li class="companion-card__country-item">
-                <img src="img/flag-thailand.svg" alt="Flag Thailand" class="companion-card__country-img" width="36" height="24">
-                <div class="companion-card_country-name">Тайланд</div>
-              </li>
-              <li class="companion-card__country-item">
-                <img src="img/flag-seychelles.svg" alt="Flag Seychelles" class="companion-card__country-img" width="36" height="24">
-                <div class="companion-card_country-name">Сейшелы</div>
-              </li>
-            </ul>
-            <div class="companion-card__active">
-              <a href="#" class="companion-card__go-button">Позвать</a>
-              <div class="companion-card__heart">
-                <img src="img/heart-active.svg" alt="Heart" class="companion-card__heart-img" width="20" height="17">
-              </div>
-              <div class="companion-card__subscribe">1,5 М</div>
+          <li class="choice-companion__card catalog-card">
+            <a href="#">
+              <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="catalog-card__foto">
+            </a>
+            <a href="#">
+              <h3 class="catalog-card__name catalog-card__name--ofline">Таня Фирсова</h3>
+            </a>
+            <div class="catalog-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</div>
+            <div class="catalog-card__country-list-wrapper">
+                <div class="catalog-card__country-list-title">
+                  <div class="catalog-card__country-list-title-text">Хочет посетить:</div>
+                </div>
+                <ul class="catalog-card__country-list">
+                  <li class="catalog-card__country-item">
+                    <img src="img/flag-sri-lanka.svg" alt="Flag Shri-lanka" class="catalog-card__country-img" width="26" height="18">
+                    <div class="catalog-card__country-name">Шри Ланка</div>
+                  </li>
+                  <li class="catalog-card__country-item">
+                    <img src="img/flag-thailand.svg" alt="Flag Thailand" class="catalog-card__country-img" width="26" height="18">
+                    <div class="catalog-card__country-name">Тайланд</div>
+                  </li>
+                  <li class="catalog-card__country-item">
+                    <img src="img/flag-seychelles.svg" alt="Flag Seychelles" class="catalog-card__country-img" width="26" height="18">
+                    <div class="catalog-card__country-name">Сейшелы</div>
+                  </li>
+                </ul>
             </div>
-            <ul class="companion-card__transports companion-card__transports--active">
-              <li class="companion-card__transport">
-                <img src="img/icon-plane.svg" alt="Plane" class="companion-card__transport-icon" width="19" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-bus.svg" alt="Bus" class="companion-card__transport-icon" width="17" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-bike.svg" alt="Bike" class="companion-card__transport-icon" width="24" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-run.svg" alt="Run man" class="companion-card__transport-icon" width="20" height="21">
-              </li>
-            </ul>
-            <div class="companion-card__level">
-              <span class="companion-card__level-number">99</span>
-              <span class="companion-card__level-text">level</span>
+            <div class="catalog-card__activity">
+              <a href="#" class="catalog-card__go-button">Позвать!</a>
+              <div class="catalog-card__heart">
+                <img src="img/heart-active.svg" alt="Heart" class="catalog-card__heart-img" width="13" height="11">
+              </div>
+              <div class="catalog-card__subscribe">1,5 М</div>
+            </div>
+            <div class="catalog-card__transport-wrapper">
+              <div class="catalog-card__transport-title">
+                <div class="catalog-card__transport-title-text">Транспорт:</div>
+              </div>
+              <ul class="catalog-card__transports-list">
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-plane.svg" alt="Plane" class="catalog-card__transport-icon" width="14" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-bus.svg" alt="Bus" class="catalog-card__transport-icon" width="13" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-bike.svg" alt="Bike" class="catalog-card__transport-icon" width="19" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-run.svg" alt="Run man" class="catalog-card__transport-icon" width="15" height="16">
+                </li>
+              </ul>
+            </div>
+              <div class="catalog-card__level">
+                <div class="catalog-card__level-title">
+                  <div class="catalog-card__level-title-text">Левел:</div>
+                </div>
+                <div class="catalog-card__level-block">
+                  <span class="catalog-card__level-number">99</span>
+                  <span class="catalog-card__level-text catalog-card__level-text--mobile">level</span>
+                  <svg width="100%" height="100%" viewBox="0 0 45 45" class="catalog-card__bar">
+                    <circle class="companion-card__bar-segment" cx="22" cy="22" r="20" fill="transparent" stroke="#ff8d30"
+                      stroke-width="3" stroke-dasharray="calc(2*3.14*20*0.99) calc(2*3.14*20*0.01)" stroke-dashoffset="32"></circle>
+                  </svg>
+                </div>
+              </div>
+          </li>
+          <li class="choice-companion__card catalog-card">
+            <a href="#">
+              <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="catalog-card__foto">
+            </a>
+            <a href="#">
+              <h3 class="catalog-card__name catalog-card__name--ofline">Петя Демин</h3>
+            </a>
+            <div class="catalog-card__hashtags">#бургер #бар #футбол #концерт #крафт</div>
+            <div class="catalog-card__country-list-wrapper">
+              <div class="catalog-card__country-list-title">
+                <div class="catalog-card__country-list-title-text">Хочет посетить:</div>
+              </div>
+              <ul class="catalog-card__country-list">
+                <li class="catalog-card__country-item">
+                  <img src="img/flag-belgium.svg" alt="Flag Belgium" class="catalog-card__country-img" width="26"
+                    height="18">
+                  <div class="catalog-card__country-name">Бельгия</div>
+                </li>
+                <li class="catalog-card__country-item">
+                  <img src="img/flag-czech.svg" alt="Flag Czech" class="catalog-card__country-img" width="26" height="18">
+                  <div class="catalog-card__country-name">Чехия</div>
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-card__activity">
+              <a href="#" class="catalog-card__go-button">Позвать!</a>
+              <div class="catalog-card__heart">
+                <img src="img/heart.svg" alt="Heart" class="catalog-card__heart-img" width="13" height="11">
+              </div>
+              <div class="catalog-card__subscribe">150</div>
+            </div>
+            <div class="catalog-card__transport-wrapper">
+              <div class="catalog-card__transport-title">
+                <div class="catalog-card__transport-title-text">Транспорт:</div>
+              </div>
+              <ul class="catalog-card__transports-list">
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-plane.svg" alt="Plane" class="catalog-card__transport-icon" width="14" height="16">
+                </li>
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-bus.svg" alt="Bus" class="catalog-card__transport-icon" width="13" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-bike.svg" alt="Bike" class="catalog-card__transport-icon" width="19" height="16">
+                </li>
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-run.svg" alt="Run man" class="catalog-card__transport-icon" width="15" height="16">
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-card__level">
+              <div class="catalog-card__level-title">
+                <div class="catalog-card__level-title-text">Левел:</div>
+              </div>
+              <div class="catalog-card__level-block">
+                <span class="catalog-card__level-number">80</span>
+                <span class="catalog-card__level-text catalog-card__level-text--mobile">level</span>
+                <svg width="100%" height="100%" viewBox="0 0 45 45" class="catalog-card__bar">
+                  <circle class="companion-card__bar-segment" cx="22" cy="22" r="20" fill="transparent" stroke="#ff8d30"
+                    stroke-width="3" stroke-dasharray="calc(2*3.14*20*0.8) calc(2*3.14*20*0.2)" stroke-dashoffset="32"></circle>
+                </svg>
+              </div>
             </div>
           </li>
-          <li class="choice-companion__card companion-card">
-            <img src="img/demin-mobile@1x.jpg" alt="Foto" class="companion-card__foto">
-            <h3 class="companion-card__name">Петя Демин</h3>
-            <div class="companion-card__hashtags">#бургер #бар #футбол #концерт #крафт</div>
-            <ul class="companion-card__country-list">
-              <li class="companion-card__country-item">
-                <img src="img/flag-belgium.svg.svg" alt="Flag Belgium" class="companion-card__country-img" width="36"
-                  height="24">
-                <div class="companion-card_country-name">Бельгия</div>
-              </li>
-              <li class="companion-card__country-item">
-                <img src="img/flag-czech.svg" alt="Flag Czech" class="companion-card__country-img" width="36" height="24">
-                <div class="companion-card_country-name">Чехия</div>
-              </li>
-            </ul>
-            <div class="companion-card__active">
-              <a href="#" class="companion-card__go-button">Позвать</a>
-              <div class="companion-card__heart">
-                <img src="img/heart.svg" alt="Heart" class="companion-card__heart-img" width="20" height="17">
-              </div>
-              <div class="companion-card__subscribe">150</div>
-            </div>
-            <ul class="companion-card__transports companion-card__transports--active">
-              <li class="companion-card__transport">
-                <img src="img/icon-plane.svg" alt="Plane" class="companion-card__transport-icon" width="19" height="21">
-              </li>
-              <li class="companion-card__transport companion-card__transports--active">
-                <img src="img/icon-bus.svg" alt="Bus" class="companion-card__transport-icon" width="17" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-bike.svg" alt="Bike" class="companion-card__transport-icon" width="24" height="21">
-              </li>
-              <li class="companion-card__transport companion-card__transports--active">
-                <img src="img/icon-run.svg" alt="Run man" class="companion-card__transport-icon" width="20" height="21">
-              </li>
-            </ul>
-            <div class="companion-card__level">
-              <span class="companion-card__level-number">80</span>
-              <span class="companion-card__level-text">level</span>
-            </div>
-          </li>
-          <li class="choice-companion__card companion-card">
-            <img src="img/smolov-mobile@1x.jpg" alt="Foto" class="companion-card__foto">
-            <h3 class="companion-card__name">Марк Смолов</h3>
-            <div class="companion-card__hashtags">#рэп #тату #хайпбист
+          <li class="choice-companion__card catalog-card">
+            <a href="#">
+              <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="catalog-card__foto">
+            </a>
+            <a href="#">
+              <h3 class="catalog-card__name catalog-card__name--ofline">Марк Смолов</h3>
+            </a>
+            <div class="catalog-card__hashtags">#рэп #тату #хайпбист
             #кроссовки #суприм</div>
-            <ul class="companion-card__country-list">
-              <li class="companion-card__country-item">
-                <img src="img/flag-usa.svg" alt="Flag USA" class="companion-card__country-img" width="36"
-                  height="24">
-                <div class="companion-card_country-name">США</div>
-              </li>
-              <li class="companion-card__country-item">
-                <img src="img/flag-australia.svg" alt="Flag Australia" class="companion-card__country-img" width="36" height="24">
-                <div class="companion-card_country-name">Австралия</div>
-              </li>
-              <li class="companion-card__country-item">
-                <img src="img/flag-dominica.svg" alt="Flag Dominica" class="companion-card__country-img" width="36"
-                  height="24">
-                <div class="companion-card_country-name">Доминикана</div>
-              </li>
-            </ul>
-            <div class="companion-card__active">
-              <a href="#" class="companion-card__go-button">Позвать</a>
-              <div class="companion-card__heart">
-                <img src="img/heart.svg" alt="Heart" class="companion-card__heart-img" width="20" height="17">
+            <div class="catalog-card__country-list-wrapper">
+              <div class="catalog-card__country-list-title">
+                <div class="catalog-card__country-list-title-text">Хочет посетить:</div>
               </div>
-              <div class="companion-card__subscribe">1700</div>
+              <ul class="catalog-card__country-list">
+                <li class="catalog-card__country-item">
+                  <img src="img/flag-usa.svg" alt="Flag USA" class="catalog-card__country-img" width="26"
+                    height="18">
+                  <div class="catalog-card__country-name">Сша</div>
+                </li>
+                <li class="catalog-card__country-item">
+                  <img src="img/flag-australia.svg" alt="Flag Australia" class="catalog-card__country-img" width="26" height="18">
+                  <div class="catalog-card__country-name">Австралия</div>
+                </li>
+                <li class="catalog-card__country-item">
+                  <img src="img/flag-dominica.svg" alt="Flag Dominica" class="catalog-card__country-img" width="26"
+                    height="18">
+                  <div class="catalog-card__country-name">Доминикана</div>
+                </li>
+              </ul>
             </div>
-            <ul class="companion-card__transports companion-card__transports--active">
-              <li class="companion-card__transport">
-                <img src="img/icon-plane.svg" alt="Plane" class="companion-card__transport-icon" width="19" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-bus.svg" alt="Bus" class="companion-card__transport-icon" width="17" height="21">
-              </li>
-              <li class="companion-card__transport companion-card__transports--active">
-                <img src="img/icon-bike.svg" alt="Bike" class="companion-card__transport-icon" width="24" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-run.svg" alt="Run man" class="companion-card__transport-icon" width="20" height="21">
-              </li>
-            </ul>
-            <div class="companion-card__level">
-              <span class="companion-card__level-number">25</span>
-              <span class="companion-card__level-text">level</span>
+            <div class="catalog-card__activity">
+              <a href="#" class="catalog-card__go-button">Позвать!</a>
+              <div class="catalog-card__heart">
+                <img src="img/heart.svg" alt="Heart" class="catalog-card__heart-img" width="13" height="11">
+              </div>
+              <div class="catalog-card__subscribe">1700</div>
+            </div>
+            <div class="catalog-card__transport-wrapper">
+              <div class="catalog-card__transport-title">
+                <div class="catalog-card__transport-title-text">Транспорт:</div>
+              </div>
+              <ul class="catalog-card__transports-list">
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-plane.svg" alt="Plane" class="catalog-card__transport-icon" width="14" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-bus.svg" alt="Bus" class="catalog-card__transport-icon" width="13" height="16">
+                </li>
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-bike.svg" alt="Bike" class="catalog-card__transport-icon" width="19" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-run.svg" alt="Run man" class="catalog-card__transport-icon" width="15" height="16">
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-card__level">
+              <div class="catalog-card__level-title">
+                <div class="catalog-card__level-title-text">Левел:</div>
+              </div>
+              <div class="catalog-card__level-block">
+                <span class="catalog-card__level-number">25</span>
+                <span class="catalog-card__level-text catalog-card__level-text--mobile">level</span>
+                <svg width="100%" height="100%" viewBox="0 0 45 45" class="catalog-card__bar">
+                  <circle class="companion-card__bar-segment" cx="22" cy="22" r="20" fill="transparent" stroke="#ff8d30"
+                    stroke-width="3" stroke-dasharray="calc(2*3.14*20*0.25) calc(2*3.14*20*0.75)" stroke-dashoffset="32"></circle>
+                </svg>
+              </div>
             </div>
           </li>
-          <li class="choice-companion__card companion-card">
-            <img src="img/rogovaya-mobile@1x.jpg" alt="Foto" class="companion-card__foto">
-            <h3 class="companion-card__name">Лариса Роговая</h3>
-            <div class="companion-card__hashtags">#образование #карьера
-            #учеба #линкедин</div>
-            <ul class="companion-card__country-list">
-              <li class="companion-card__country-item">
-                <img src="img/flag-united-kingdom.svg" alt="Flag United Kingdom" class="companion-card__country-img" width="36"   height="24">
-                <div class="companion-card_country-name">Великобритания</div>
-              </li>
-              <li class="companion-card__country-item">
-                <img src="img/flag-australia.svg" alt="Flag Australia" class="companion-card__country-img" width="36" height="24">
-                <div class="companion-card_country-name">Австралия</div>
-              </li>
-            </ul>
-            <div class="companion-card__active">
-              <a href="#" class="companion-card__go-button">Позвать</a>
-              <div class="companion-card__heart">
-                <img src="img/heart.svg" alt="Heart" class="companion-card__heart-img" width="20" height="17">
+          <li class="choice-companion__card catalog-card">
+            <a href="#">
+              <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="catalog-card__foto">
+            </a>
+            <a href="#">
+              <h3 class="catalog-card__name catalog-card__name--ofline">Лариса Роговая</h3>
+            </a>
+            <div class="catalog-card__hashtags">#образование #карьера #учеба #линкедин
+</div>
+            <div class="catalog-card__country-list-wrapper">
+              <div class="catalog-card__country-list-title">
+                <div class="catalog-card__country-list-title-text">Хочет посетить:</div>
               </div>
-              <div class="companion-card__subscribe">23</div>
+              <ul class="catalog-card__country-list">
+                <li class="catalog-card__country-item">
+                  <img src="img/flag-united-kingdom.svg" alt="Flag United Kingdom" class="catalog-card__country-img" width="26"
+                    height="18">
+                  <div class="catalog-card__country-name">Великобритания</div>
+                </li>
+                <li class="catalog-card__country-item">
+                  <img src="img/flag-thailand.svg" alt="Flag Thailand" class="catalog-card__country-img" width="26" height="18">
+                  <div class="catalog-card__country-name">Тайланд</div>
+                </li>
+              </ul>
             </div>
-            <ul class="companion-card__transports companion-card__transports--active">
-              <li class="companion-card__transport">
-                <img src="img/icon-plane.svg" alt="Plane" class="companion-card__transport-icon" width="19" height="21">
-              </li>
-              <li class="companion-card__transport companion-card__transports--active">
-                <img src="img/icon-bus.svg" alt="Bus" class="companion-card__transport-icon" width="17" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-bike.svg" alt="Bike" class="companion-card__transport-icon" width="24" height="21">
-              </li>
-              <li class="companion-card__transport">
-                <img src="img/icon-run.svg" alt="Run man" class="companion-card__transport-icon" width="20" height="21">
-              </li>
-            </ul>
-            <div class="companion-card__level">
-              <span class="companion-card__level-number">50</span>
-              <span class="companion-card__level-text">level</span>
+            <div class="catalog-card__activity">
+              <a href="#" class="catalog-card__go-button">Позвать!</a>
+              <div class="catalog-card__heart">
+                <img src="img/heart.svg" alt="Heart" class="catalog-card__heart-img" width="13" height="11">
+              </div>
+              <div class="catalog-card__subscribe">23</div>
+            </div>
+            <div class="catalog-card__transport-wrapper">
+              <div class="catalog-card__transport-title">
+                <div class="catalog-card__transport-title-text">Транспорт:</div>
+              </div>
+              <ul class="catalog-card__transports-list">
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-plane.svg" alt="Plane" class="catalog-card__transport-icon" width="14" height="16">
+                </li>
+                <li class="catalog-card__transport-item catalog-card__transport-item--active">
+                  <img src="img/icon-bus.svg" alt="Bus" class="catalog-card__transport-icon" width="13" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-bike.svg" alt="Bike" class="catalog-card__transport-icon" width="19" height="16">
+                </li>
+                <li class="catalog-card__transport-item">
+                  <img src="img/icon-run.svg" alt="Run man" class="catalog-card__transport-icon" width="15" height="16">
+                </li>
+              </ul>
+            </div>
+            <div class="catalog-card__level">
+              <div class="catalog-card__level-title">
+                <div class="catalog-card__level-title-text">Левел:</div>
+              </div>
+              <div class="catalog-card__level-block">
+                <span class="catalog-card__level-number">50</span>
+                <span class="catalog-card__level-text catalog-card__level-text--mobile">level</span>
+                <svg width="100%" height="100%" viewBox="0 0 45 45" class="catalog-card__bar">
+                  <circle class="companion-card__bar-segment" cx="22" cy="22" r="20" fill="transparent" stroke="#ff8d30"
+                    stroke-width="3" stroke-dasharray="calc(2*3.14*20*0.5) calc(2*3.14*20*0.5)" stroke-dashoffset="32"></circle>
+                </svg>
+              </div>
             </div>
           </li>
         </ul>
-        <a href="#" class="choice-companion__more-button">
-          <img src="img/qty-plus-mobile.svg" alt="" class="choice-companion__more-img" width="18" height="18">
-          <div class="choice-companion__more-text">Показать еще</div>
-        </a>
+        <div class="choice-companion__more-button">
+          <a href="#" class="choice-companion__more-button-icon">
+            <img src="img/qty-plus-mobile.svg" alt="" class="choice-companion__more-button-img" width="18" height="18">
+          </a>
+          <a href="#" class="choice-companion__more-button-text">Показать еще</a>
+        </div>
         <div class="choice-companion__page-panel">
           <ul class="choice-companion__page-list">
-            <li class="choice-companion">1</li>
-            <li class="choice-companion">2</li>
-            <li class="choice-companion">3</li>
-            <li class="choice-companion">4</li>
+            <li class="choice-companion__page-list-item">1</li>
+            <li class="choice-companion__page-list-item">2</li>
+            <li class="choice-companion__page-list-item">3</li>
+            <li class="choice-companion__page-list-item">4</li>
           </ul>
           <div class="choice-companion__page-arrow">
-            <img src="img/triangle-arrow-left.svg" alt="Left arrow" class="choice-companion__page-left" width="11" height="20">
-            <img src="img/triangle-arrow-right.svg" alt="Right arrow" class="choice-companion__page-right" width="11" height="20">
+            <a href="#" class="choice-companion__page-arrow-link">
+              <img src="img/triangle-arrow-left.svg" alt="Left arrow" class="choice-companion__page-left" width="11" height="20">
+            </a>
+            <a href="#" class="choice-companion__page-arrow-link">
+              <img src="img/triangle-arrow-right.svg" alt="Right arrow" class="choice-companion__page-right" width="11" height="20">
+            </a>
           </div>
         </div>
         <form action="" class="choice-companion__form form-companion">
           <h2 class="form-companion__title">Подберите Идеального попутчика</h2>
           <ul class="form-companion__group-list">
             <li class="form-companion__group">
-            <div class="form-companion__group-title-wrapper">
-              <h3 class="form-companion__group-title">Хобби</h3>
-            </div>
-            <ul class="form-companion__list">
-              <li>
-                <label class="form-companion__checkbox">
-                  <input type="checkbox" class="visually-hidden" name="reading">
-                  <span class="checkbox-indicator"></span>
-                  Чтение
-                </label>
-              </li>
-              <li>
-                <label class="form-companion__checkbox">
-                  <input type="checkbox" class="visually-hidden" name="swimming">
-                  <span class="checkbox-indicator"></span>
-                  Плавание
-                </label>
-              </li>
-              <li>
-                <label class="form-companion__checkbox">
-                  <input type="checkbox" class="visually-hidden" name="tourism">
-                  <span class="checkbox-indicator"></span>
-                  Туризм
-                </label>
-              </li>
-            </ul>
+              <div class="form-companion__group-title-wrapper">
+                <h3 class="form-companion__group-title">Хобби</h3>
+                <a href="#" class="form-companion__group-title-arrow">
+                  <img src="img/triangle-arrow-right.svg" alt="Arrow open block" class="" width="4" height="8">
+                </a>
+              </div>
+              <ul class="form-companion__list">
+                <li>
+                  <label class="form-companion__checkbox checkbox">
+                    <input type="checkbox" class="visually-hidden" name="reading">
+                    <span class="checkbox__indicator"></span>
+                    Чтение
+                  </label>
+                </li>
+                <li>
+                  <label class="form-companion__checkbox checkbox">
+                    <input type="checkbox" class="visually-hidden" name="swimming">
+                    <span class="checkbox__indicator"></span>
+                    Плавание
+                  </label>
+                </li>
+                <li>
+                  <label class="form-companion__checkbox checkbox">
+                    <input type="checkbox" class="visually-hidden" name="tourism">
+                    <span class="checkbox__indicator"></span>
+                    Туризм
+                  </label>
+                </li>
+              </ul>
             </li>
             <li class="form-companion__group">
               <div class="form-companion__group-title-wrapper">
                 <h3 class="form-companion__group-title">Музыка</h3>
+                <a href="#" class="form-companion__group-title-arrow">
+                  <img src="img/triangle-arrow-right.svg" alt="Arrow open block" class="" width="4" height="8">
+                </a>
               </div>
               <ul class="form-companion__list">
                 <li>
-                  <label class="form-companion__checkbox">
+                  <label class="form-companion__checkbox checkbox">
                     <input type="checkbox" class="visually-hidden" name="hard-rock">
-                    <span class="checkbox-indicator"></span>
+                    <span class="checkbox__indicator"></span>
                     Тяжелый рок
                   </label>
                 </li>
                 <li>
-                  <label class="form-companion__checkbox">
+                  <label class="form-companion__checkbox checkbox">
                     <input type="checkbox" class="visually-hidden" name="russian-rap">
-                    <span class="checkbox-indicator"></span>
+                    <span class="checkbox__indicator"></span>
                     Русский рэп
                   </label>
                 </li>
                 <li>
-                  <label class="form-companion__checkbox">
+                  <label class="form-companion__checkbox checkbox">
                     <input type="checkbox" class="visually-hidden" name="eurodance">
-                    <span class="checkbox-indicator"></span>
+                    <span class="checkbox__indicator"></span>
                     Евроденс
                   </label>
                 </li>
@@ -707,26 +823,29 @@
             <li class="form-companion__group">
               <div class="form-companion__group-title-wrapper">
                 <h3 class="form-companion__group-title">Еда</h3>
+                <a href="#" class="form-companion__group-title-arrow">
+                  <img src="img/triangle-arrow-right.svg" alt="Arrow open block" class="" width="4" height="8">
+                </a>
               </div>
               <ul class="form-companion__list">
                 <li>
-                  <label class="form-companion__checkbox">
+                  <label class="form-companion__checkbox checkbox">
                     <input type="checkbox" class="visually-hidden" name="fruits">
-                    <span class="checkbox-indicator"></span>
+                    <span class="checkbox__indicator"></span>
                     Фрукты
                   </label>
                 </li>
                 <li>
-                  <label class="form-companion__checkbox">
+                  <label class="form-companion__checkbox checkbox">
                     <input type="checkbox" class="visually-hidden" name="alcohol">
-                    <span class="checkbox-indicator"></span>
+                    <span class="checkbox__indicator"></span>
                     Алкоголь
                   </label>
                 </li>
                 <li>
-                  <label class="form-companion__checkbox">
+                  <label class="form-companion__checkbox checkbox">
                     <input type="checkbox" class="visually-hidden" name="meat">
-                    <span class="checkbox-indicator"></span>
+                    <span class="checkbox__indicator"></span>
                     Мясо
                   </label>
                 </li>
@@ -735,45 +854,60 @@
             <li class="form-companion__group">
               <div class="form-companion__group-title-wrapper">
                 <h3 class="form-companion__group-title">Транспорт</h3>
+                <a href="#" class="form-companion__group-title-arrow">
+                  <img src="img/triangle-arrow-right.svg" alt="Arrow open block" class="" width="4" height="8">
+                </a>
               </div>
-              <ul class="form-companion__list">
+              <ul class="form-companion__list form-companion__list-transport">
                 <li>
                   <label class="form-companion__checkbox">
                     <input type="checkbox" class="visually-hidden" name="plane">
-                    <div class="checkbox-indicator">
-                      <img src="img/icon-plane.svg" alt="Plane" class="form-companion__transport-icon" width="19" height="21">
+                    <div class="form-companion__checkbox-indicator-transport">
+                      <img src="img/icon-plane.svg" alt="Plane" class="form-companion__transport-icon" width="14" height="16">
                     </div>
                   </label>
                 </li>
                 <li>
                   <label class="form-companion__checkbox">
                     <input type="checkbox" class="visually-hidden" name="bus">
-                    <div class="checkbox-indicator">
-                      <img src="img/icon-bus.svg" alt="Bus" class="form-companion__transport-icon" width="17" height="21">
+                    <div class="form-companion__checkbox-indicator-transport">
+                      <img src="img/icon-bus.svg" alt="Bus" class="form-companion__transport-icon" width="13" height="16">
                     </div>
                   </label>
                 </li>
                 <li>
                   <label class="form-companion__checkbox">
                     <input type="checkbox" class="visually-hidden" name="bike">
-                    <div class="checkbox-indicator">
-                      <img src="img/icon-bike.svg" alt="Bike" class="form-companion__transport-icon" width="24" height="21">
+                    <div class="form-companion__checkbox-indicator-transport">
+                      <img src="img/icon-bike.svg" alt="Bike" class="form-companion__transport-icon" width="19" height="16">
                     </div>
                   </label>
                 </li>
                 <li>
                   <label class="form-companion__checkbox">
                     <input type="checkbox" class="visually-hidden" name="run">
-                    <div class="checkbox-indicator">
-                      <img src="img/icon-run.svg" alt="Run man" class="form-companion__transport-icon" width="20" height="21">
+                    <div class="form-companion__checkbox-indicator-transport">
+                      <img src="img/icon-run.svg" alt="Run man" class="form-companion__transport-icon" width="15" height="16">
                     </div>
                   </label>
                 </li>
               </ul>
             </li>
             <li class="form-companion__group">
-              <div class="form-companion__group-title-wrapper">
-                <h3 class="form-companion__group-title">Левел</h3>
+              <div class="form-companion__group-title-block">
+                <div class="form-companion__group-title-wrapper">
+                  <h3 class="form-companion__group-title">Левел</h3>
+                  <a href="#" class="form-companion__group-title-arrow">
+                    <img src="img/triangle-arrow-right.svg" alt="Arrow open block" class="" width="4" height="8">
+                  </a>
+                </div>
+                <div class="form-companion__group-level-bar">
+                  <div class="form-companion__group-level-number">30</div>
+                  <div class="form-companion__group-level-number">100</div>
+                </div>
+                <div class="form-companion__group-line">
+                  <div class="form-companion__group-line-range"></div>
+                </div>
               </div>
             </li>
           </ul>
@@ -787,24 +921,34 @@
 
   <footer class="page-footer">
 
-    <div class="page-footer__wrapper wrapper">
-      <a href="#" class="page-footer__logo">
-        <img src="img/logo-mobile-white@1x.png" alt="Pognali logo">
-      </a>
-      <ul class="page-footer__social">
-        <li class="page-footer__social_item">
-          <img src="img/facebook.svg" alt="Facebook" width="11" height="20">
-        </li>
-        <li class="page-footer__social_item">
-          <img src="img/vk.svg" alt="VK" width="23" height="12">
-        </li>
-        <li class="page-footer__social_item">
-          <img src="img/instagram.svg" alt="Instagram" width="18" height="18">
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <span class="page-footer__copyright-text">Разработано</span>
-        <img src="img/htmlacademy.svg" alt="HTML Academy logo" class="page-footer__copyright-logo" width="27" height="34">
+    <div class="page-footer__center">
+      <div class="page-footer__wrapper wrapper">
+        <a href="#" class="page-footer__logo">
+          <img src="img/logo-mobile-blue@1x.png" alt="Pognali logo" class="page-footer__logo-img">
+        </a>
+        <ul class="page-footer__social">
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-item-link">
+              <img src="img/facebook.svg" alt="Facebook" width="11" height="20">
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-item-link">
+              <img src="img/vk.svg" alt="VK" width="23" height="12">
+            </a>
+          </li>
+          <li class="page-footer__social-item">
+            <a href="#" class="page-footer__social-item-link">
+              <img src="img/instagram.svg" alt="Instagram" width="18" height="18">
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a href="#" class="page-footer__copyright-text">Разработано</a>
+          <a href="#" class="page-footer__copyright-logo">
+            <img src="img/htmlacademy.svg" alt="HTML Academy logo" class="page-footer__copyright-logo-img" width="27" height="34">
+          </a>
+        </div>
       </div>
     </div>
 

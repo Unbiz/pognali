@@ -1,0 +1,137 @@
+.user-info {
+  padding: 50px 0 65px 0;
+  background-color: $white_2;
+  position: relative;
+  top: -30px;
+  width: 320px;
+  margin: 0 auto;
+  z-index: 7;
+}
+
+.user-info__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.user-info__level {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.user-info__level-number {
+  font-size: 38px;
+  line-height: 38px;
+  color: $blue_4;
+  border-bottom: 2px solid #cbced9;
+}
+
+.user-info__level-text {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $gray;
+}
+
+.user-info__level-segment {
+  position: absolute;
+
+}
+
+.user-info__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-info__avatar-img {
+  width: 100%;
+}
+
+.use-info__change-foto-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #dfe3f0;
+  height: 40px;
+  border-radius: 20px;
+  color: $blue_1;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.user-info__tags-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid $gray;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+}
+
+.user-info__tags-title {
+  position: absolute;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
+  top: -9px;
+  color: $blue_4;
+  background-color: $white_2;
+}
+
+.user-info__tags-text {
+  font-weight: 400;
+  color: $gray;
+}
+
+.user-info__transport-area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid $gray;
+  padding: 15px;
+}
+
+.user-info__transport-title {
+  position: absolute;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
+  top: -9px;
+  color: $blue_4;
+  background-color: $white_2;
+}
+
+.user-info__transports {
+  @include list-default;
+  display: flex;
+  justify-content: center;
+}
+
+.user-info__transport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: $white;
+  border-radius: 50%;
+}

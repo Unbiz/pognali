@@ -1,0 +1,260 @@
+.catalog-card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 12px 18px 22px 18px;
+}
+
+.catalog-card__foto {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.catalog-card__name {
+  width: 120px;
+  font-size: 20px;
+  line-height: 20px;
+  color: $blue_1;
+  margin: 0;
+  margin-left: 16px;
+}
+
+.catalog-card__name--online {
+  &::before {
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #81e31e;
+  }
+}
+
+.catalog-card__name--ofline {
+  &::before {
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #f97676;
+  }
+}
+
+.catalog-card__hashtags {
+  color: $gray;
+  font-weight: 400;
+  margin-bottom: 11px;
+  margin-left: 8px;
+  font-size: 15px;
+  line-height: 18px;
+  width: 200px;
+}
+
+.catalog-card__country-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.catalog-card__country-list {
+  position: relative;
+  @include list-default;
+  padding: 7px;
+  padding-bottom: 0;
+}
+
+.catalog-card__country-item {
+  position: relative;
+  display: flex;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $blue_1;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.catalog-card__country-name {
+  margin-left: 14px;
+}
+
+.catalog-card__country-list-title-text {
+  display: inline;
+  font-weight: 400;
+  color: $gray;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: lowercase;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $white;
+}
+
+.catalog-card__country-list-title {
+  position: relative;
+  margin-bottom: 8px;
+
+  &::before {
+    position: absolute;
+    left: -18px;
+    top: 12px;
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: $white_2;
+  }
+}
+
+.catalog-card__transports-list {
+  @include list-default;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6px;
+}
+
+.catalog-card__transport-wrapper {
+   display: flex;
+   flex-direction: column;
+}
+
+.catalog-card__transport-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $white_2;
+}
+
+.catalog-card__transport-title {
+  position: relative;
+  margin-bottom: 8px;
+
+  &::before {
+    position: absolute;
+    left: -18px;
+    top: 12px;
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: $white_2;
+  }
+}
+
+.catalog-card__transport-title-text {
+  display: inline;
+  font-weight: 400;
+  color: $gray;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: lowercase;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $white;
+}
+
+.catalog-card__level {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+.catalog-card__level-title-text {
+  display: inline;
+  font-weight: 400;
+  color: $gray;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: lowercase;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $white;
+}
+
+.catalog-card__level-block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-left: auto;
+  margin-top: 5px;
+
+}
+
+.catalog-card__level-number {
+  font-size: 24px;
+  color: $blue_4;
+}
+
+.catalog-card__level-text {
+
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.catalog-card__bar {
+  position: absolute;
+}
+
+.catalog-card__activity {
+  width: 100%;
+  order: 6;
+}
+
+.catalog-card__go-button {
+  display: block;
+  justify-content: space-between;
+  background-color: $orange_4;
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  line-height: 40px;
+  color: $blue_1;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 20px
+}
+
+.catalog-card__heart {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $white_2;
+  top: 55px;
+  left: 70px;
+}
+
+.catalog-card__subscribe {
+  position: absolute;
+  font-size: 14px;
+  line-height: 21px;
+  color: $blue_1;
+  top: 60px;
+  left: 105px;
+}

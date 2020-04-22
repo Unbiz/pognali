@@ -2,6 +2,10 @@
   padding: 42px 0 40px 0;
   color: $blue_2;
   text-transform: uppercase;
+
+  &--block {
+    display: none;
+  }
 }
 
 .main-menu__list {

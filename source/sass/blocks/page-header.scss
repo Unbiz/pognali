@@ -1,5 +1,14 @@
 .page-header {
   background-color: $white;
+  width: 320px;
+  margin: 0 auto;
+
+  &--close {
+    background-color: $blue_1;
+  }
+}
+
+.page-header__wrapper {
 }
 
 .page-header__top-menu {
@@ -7,7 +16,9 @@
   justify-content: space-between;
   padding: 26px 0 22px 0;
 
-
+  &--close {
+    background-color: $blue_1;
+  }
 
 }
 
@@ -15,8 +26,24 @@
   width: 100px;
 }
 
+.page-header__logo-img {
+  display: none;
+
+  &--white {
+    display: block;
+  }
+
+  &--blue {
+    display: block;
+  }
+}
+
 .page-header__toggle-open {
   display: none;
+
+  &--enable {
+    display: block;
+  }
 }
 
 .page-header__toggle-close {

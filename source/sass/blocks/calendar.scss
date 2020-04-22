@@ -1,0 +1,26 @@
+.calendar {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.calendar__title-item {
+  color: $gray;
+  font-weight: 400;
+  width: 30px;
+  height: 30px;
+}
+
+.calendar__title-letter {
+  display: none;
+}
+
+.calendar__item {
+  border: 1px solid #cbced9;
+  color: #c7c7c7;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}

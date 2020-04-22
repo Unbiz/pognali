@@ -1,0 +1,149 @@
+.filter {
+  background-color: $gray_3;
+  position: relative;
+  top: -20px;
+  width: 320px;
+  margin: 0 auto;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 9;
+  padding-top: 24px;
+}
+
+.filter__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__menu-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter__title {
+  color: $blue_2;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 14px;
+}
+
+.filter__title-colon {
+  display: none;
+}
+
+.filter__menu-right {
+  margin-left: auto;
+  margin-right: 6px;
+}
+
+.filter__menu-right-text {
+  display: none;
+}
+
+.filter__menu-right-collapse {
+  display: none;
+}
+
+.filter__country-menu {
+  @include list-default;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 25px 16px 25px;
+
+  &--close {
+    display: none;
+  }
+}
+
+.filter_country-menu-item {
+  text-transform: uppercase;
+  color: #a5aabd;
+  margin-bottom: 5px;
+
+  &--active {
+    color: $blue_1;
+  }
+}
+
+.filter__table-block {
+  padding-left: 25px;
+  padding-right: 25px;
+
+  &--close {
+    display: none;
+  }
+}
+
+.filter__table-list {
+  @include list-default;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__table-item {
+  margin-top: 1px;
+  margin-left: 1px;
+  box-shadow: 0 0 0 1px #cbced9;
+}
+
+.filter__table-country-list {
+  @include list-default;
+  display: none;
+  position: absolute;
+  margin-top: 230px;
+  font-weight: 400;
+  color: $gray;
+
+  &--active {
+    display: block;
+  }
+}
+
+.filter__table-letter {
+  display: block;
+  font-size: 14px;
+  line-height: 40px;
+  text-transform: uppercase;
+  width: 43px;
+  height: 40px;
+  background-color: $white;
+  color: $blue_4;
+  text-align: center;
+}
+
+.filter__table-item--active {
+  box-shadow: 0 0 0 1px $blue_4;
+  z-index: 10;
+}
+
+.filter__table-item--active .filter__table-letter {
+  background-color: $blue_4;
+  color: $white;
+}
+
+.filter__close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #d6daed;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: $blue_1;
+  margin-top: 270px;
+  margin-bottom: 27px;
+
+  &--close {
+    display: none;
+  }
+}
+
+.filter__close-text {
+  margin-left: 12px;
+}

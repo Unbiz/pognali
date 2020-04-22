@@ -1,4 +1,6 @@
 .main-title-up {
+  width: 320px;
+  margin: 0 auto;
   background-color: $blue_1;
   padding-top: 25px;
   background-image:
@@ -10,6 +12,8 @@
 }
 
 .main-title {
+  width: 320px;
+  margin: 0 auto;
   background-color: $blue_1;
   background-image: linear-gradient(transparent 282px, $blue_2 150px);
 }

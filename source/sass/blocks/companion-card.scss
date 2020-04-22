@@ -65,19 +65,22 @@
 }
 
 .companion-card__name {
-  position: relative;
   font-size: 21px;
   line-height: 21px;
   color: $blue_1;
-  text-align: center;
   margin-bottom: 16px;
+  text-align: center;
 }
 
-.companion-card__name--online {
+.companion-card__name-text {
+  position: relative;
+}
+
+.companion-card__name-text--online {
   &::before {
     position: absolute;
-    left: 40px;
-    top: 8px;
+    left: -15px;
+    top: 12px;
     content: "";
     width: 5px;
     height: 5px;
@@ -86,11 +89,11 @@
   }
 }
 
-.companion-card__name--ofline {
+.companion-card__name-text--ofline {
   &::before {
     position: absolute;
-    left: 32px;
-    top: 8px;
+    left: -15px;
+    top: 12px;
     content: "";
     width: 5px;
     height: 5px;
