@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 10px 0;
-  padding: 20px 25px;
+  padding: 20px 25px 22px 25px;
   border: none;
   border-radius: 10px;
   background-color: $white;
@@ -39,7 +39,6 @@
   line-height: 30px;
   color: $blue_4;
   text-transform: uppercase;
-  margin-bottom: 12px;
 }
 
 .step__button-prew-link {
@@ -48,6 +47,7 @@
   color: $blue_4;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 12px;
 }
 
 .step__indicator-desktop {
@@ -80,11 +80,13 @@
 }
 
 .step__find-checkbox {
+  display: block;
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
   color: $gray;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  margin-top: 27px;
   padding-left: 40px;
 }
 
@@ -94,6 +96,7 @@
   border: 1px solid #cbced9;
   border-radius: 3px;
   top: -5px;
+  left: 0px;
 }
 
 .step__find-checkbox input[type="checkbox"]:checked+.checkbox__indicator::before {
@@ -117,13 +120,14 @@
   font-size: 20px;
   line-height: 20px;
   color: $blue_4;
-  margin: 20px 0;
+  margin: 0 0 16px 0;
 }
 
 .step__route-list {
   @include list-default;
   padding: 0;
   margin: 0;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -265,7 +269,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 
   &::before {
     content: "";
@@ -309,6 +313,7 @@
 
 .step__fun-area {
   width: 100%;
+  height: 220px;
   padding: 15px;
   box-sizing: border-box;
   resize: none;

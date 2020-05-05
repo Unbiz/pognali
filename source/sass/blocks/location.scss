@@ -1,22 +1,20 @@
 .location {
-  padding: 60px 0 32px 0;
-  background-color: $orange_4;
   position: relative;
-  top: -150px;
-  width: 320px;
-  margin: 0 auto;
-  border-bottom-right-radius: 28px;
-  border-bottom-left-radius: 28px;
-  z-index: 5;
-}
-
-.location__wrapper {
   display: flex;
   flex-direction: column;
+  z-index: 5;
+  padding-top: 62px;
+  padding-bottom: 34px;
+  margin-top: -30px;
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+  background-color: $orange_4;
+  color: $white;
 }
 
 .location__tag {
   display: flex;
+  align-items: center;
 }
 
 .location__tag-icon {
@@ -40,10 +38,81 @@
 .location__link {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 18px;
   font-size: 18px;
   line-height: 18px;
   color: $blue_4;
   border: 3px solid $blue_2;
   border-radius: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .location {
+    padding-top: 106px;
+    padding-bottom: 80px;
+    padding-left: 75px;
+    padding-right: 75px;
+    margin-top: -60px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  .location__tag {
+    margin-bottom: 42px;
+  }
+
+  .location__tag-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .location__address-text {
+    width: auto;
+    margin-bottom: 0;
+    margin-left: 22px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .location__link {
+    padding: 26px 32px;
+    font-size: 24px;
+    line-height: 24px;
+    border: 3px solid $blue_2;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .location {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 114px;
+    padding-bottom: 54px;
+    padding-left: 132px;
+    padding-right: 132px;
+  }
+
+  .location__tag {
+    margin-bottom: 0;
+    margin-left: 150px;
+  }
+
+  .location__tag-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .location__address-text {
+    margin-left: 32px;
+  }
+
+  .location__link {
+    padding: 26px 32px;
+  }
+
+  .location__text-button {
+    margin-right: 24px;
+  }
 }

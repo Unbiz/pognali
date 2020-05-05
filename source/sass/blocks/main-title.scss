@@ -1,42 +1,45 @@
-.main-title-up {
-  width: 320px;
-  margin: 0 auto;
+.main-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: $blue_1;
-  padding-top: 25px;
   background-image:
+  linear-gradient($blue_2, $blue_2),
+  linear-gradient($blue_1, $blue_1),
     url(../img/traveller-illustration-mobile@1x.png),
     url(../img/globe-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position: calc(50% + 15px) 160px,
-  center -50px;
+  background-position: center 765px, center 480px,  calc(50% + 15px) 222px,  center 0;
+  padding-top: 90px;
 }
 
-.main-title {
-  width: 320px;
-  margin: 0 auto;
-  background-color: $blue_1;
-  background-image: linear-gradient(transparent 282px, $blue_2 150px);
-}
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .main-title {
+    background-image:
+      linear-gradient($blue_2, $blue_2),
+      linear-gradient($blue_1, $blue_1),
+      url(../img/traveller-illustration-mobile@2x.png),
+      url(../img/globe-back-mobile@2x.jpg);
+    background-size: auto, auto, 192px, 320px;
+  }
 
-.main-title__wrapper {
-  position: relative;
+
 }
 
 .main-title__title {
+  margin: 0;
+  margin-bottom: 248px;
+  padding: 0 15px;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
-  margin: 0;
-  padding: 0 15px 270px 15px;
+  color: $white;
 }
 
 .main-title__contacts  {
   @include list-default;
   display: flex;
-  justify-content: start;
-  position: relative;
-  top: -20px;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 .main-title__contacts-item--login {
@@ -72,8 +75,10 @@
 
 .main-title__review {
   padding-left: 25px;
-  width: 160px;
-  margin-bottom: 32px;
+  width: 185px;
+  margin: 0;
+  margin-bottom: 48px;
+  color: $white;
 }
 
 .main-title__blockquote {
@@ -83,5 +88,96 @@
 }
 
 .main-title__author {
+  font-style: normal;
   font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+  .main-title {
+    background-color: $blue_2;
+    background-image:
+      linear-gradient($blue_2, $blue_2),
+      url(../img/traveller-illustration-tablet@1x.png),
+      url(../img/globe-back-tablet@1x.jpg);
+    background-position: center 994px, calc(50% + 86px) 404px, center 382px;
+    padding-top: 158px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-title {
+      background-image:
+        linear-gradient($blue_2, $blue_2),
+        url(../img/traveller-illustration-tablet@2x.png),
+        url(../img/globe-back-tablet@2x.jpg);
+      background-size: 768px, 372px, 1479px;
+    }
+  }
+
+  .main-title__title {
+    font-size: 60px;
+    line-height: 70px;
+    padding: 0 140px;
+    margin-bottom: 88px;
+  }
+
+  .main-title__contacts {
+    display: none;
+  }
+
+  .main-title__review {
+    padding-left: 34px;
+    margin-bottom: 210px;
+    width: 300px;
+  }
+
+  .main-title__blockquote {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 44px;
+  }
+
+  .main-title__author {
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-title {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $blue_1;
+    background-image: url(../img/traveller-illustration-desktop@1x.png),
+                      url(../img/globe-back-desktop@1x.jpg);
+    background-position: calc(50% + 100px) 110px,
+                        center 0px;
+    padding-top: 206px;
+    padding-bottom: 82px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .main-title {
+      background-image: url(../img/traveller-illustration-desktop@2x.png),
+                        url(../img/globe-back-desktop@2x.jpg);
+      background-size: 431px, 1800px;
+    }
+  }
+
+  .main-title__title {
+    width: 480px;
+    padding: 0 0 0 68px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .main-title__review {
+    width: 320px;
+    margin-bottom: 0;
+  }
+
+  .main-title__blockquote {
+    margin-bottom: 44px;
+  }
 }

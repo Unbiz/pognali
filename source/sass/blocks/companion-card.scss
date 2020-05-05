@@ -1,9 +1,10 @@
 .companion-card {
+  position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background-color: $white;
   border-radius: 10px;
-  overflow: hidden;
   margin-bottom: 10px;
 }
 
@@ -30,6 +31,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  color: $white;
 }
 
 .companion-card__level-number {
@@ -76,30 +78,26 @@
   position: relative;
 }
 
-.companion-card__name-text--online {
-  &::before {
-    position: absolute;
-    left: -15px;
-    top: 12px;
-    content: "";
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #81e31e;
-  }
+.companion-card__name-text--online::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 12px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #81e31e;
 }
 
-.companion-card__name-text--ofline {
-  &::before {
-    position: absolute;
-    left: -15px;
-    top: 12px;
-    content: "";
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #f97676;
-  }
+.companion-card__name-text--ofline::before {
+  position: absolute;
+  left: -15px;
+  top: 12px;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f97676;
 }
 
 .companion-card__hashtags {
@@ -121,4 +119,48 @@
 .companion-card__transport {
   padding-left: 7px;
   padding-right: 7px;
+}
+
+@media (min-width: $tablet-width) {
+  .companion-card {
+    width: 286px;
+    border-radius: 20px;
+  }
+
+  .companion-card__info {
+    padding-top: 20px;
+    padding-bottom: 22px;
+  }
+
+ .companion-card__foto {
+  height: 286px;
+  }
+
+  .companion-card__countries {
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .companion-card__name {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .companion-card__hashtags {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+
+  .companion-card__level {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+
 }

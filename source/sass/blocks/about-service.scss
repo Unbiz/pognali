@@ -1,18 +1,16 @@
 .about-service {
+  position: relative;
+  z-index: 10;
   background-color: $blue_2;
   background-image: url(../img/about-mobile@1x.png);
   background-repeat: no-repeat;
   background-position: center top ;
-  width: 320px;
-  margin: 0 auto;
-  border-bottom-right-radius: 28px;
-  border-bottom-left-radius: 28px;
-  position: relative;
-  z-index: 10;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .about-service__contant {
-  padding: 34px 25px 56px 25px;
+  padding: 30px 25px 58px 25px;
 }
 
 .about-service__title {
@@ -21,12 +19,85 @@
 
 .about-service__text {
   @include text;
+  color: $white;
 }
 
 .about-service__tagline {
   margin: 0;
+  color: $white;
 }
 
-.about-service__more--mobile {
+.about-service__more {
 display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about-service {
+    padding-top: 64px;
+    padding-bottom: 30px;
+    background-image: url(../img/about-tablet@1x.png);
+    background-position: 98% 105px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  .about-service__contant {
+    width: 360px;
+    padding-left: 34px;
+  }
+
+  .about-service__title {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 40px;
+  }
+
+  .about-service__text {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 33px;
+  }
+
+  .about-service__tagline {
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 54px;
+  }
+
+  .about-service__more {
+    display: flex;
+    padding: 28px 32px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-service {
+    padding-top: 98px;
+    padding-bottom: 106px;
+    background-image: url(../img/about-desktop@1x.png);
+    background-position: 93% 84px;
+  }
+
+  .about-service__contant {
+    width: 710px;
+    padding-left: 72px;
+  }
+
+  .about-service__title {
+    margin-bottom: 60px;
+  }
+
+  .about-service__text {
+    margin-bottom: 38px;
+  }
+
+  .about-service__tagline {
+    width: 430px;
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 86px;
+  }
 }

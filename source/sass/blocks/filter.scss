@@ -1,13 +1,12 @@
 .filter {
-  background-color: $gray_3;
   position: relative;
-  top: -20px;
-  width: 320px;
-  margin: 0 auto;
+  z-index: 9;
+  background-color: $gray_3;
+  margin-top: -20px;
+  padding-bottom: 1px;
+  padding-top: 22px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  z-index: 9;
-  padding-top: 24px;
 }
 
 .filter__menu {

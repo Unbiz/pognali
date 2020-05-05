@@ -1,22 +1,19 @@
-.business-modal {
+.busines-modal {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  overflow: hidden;
+  z-index: 77;
   top: 70px;
+  left: 0;
+  right: 0;
+  width: 270px;
+  margin: 0 auto;
   background-color: $white;
   border-radius: 15px;
-  z-index: 77;
-  width: 270px;
-  overflow: hidden;
-}
 
-.busines-modal__wrapper {
-  display: none;
-  width: 320px;
-  margin: 0 auto;
-
-  &--show {
-    display: block;
+  &--close {
+    display: none;
   }
 }
 

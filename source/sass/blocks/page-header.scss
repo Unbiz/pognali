@@ -1,51 +1,99 @@
 .page-header {
-  background-color: $white;
-  width: 320px;
-  margin: 0 auto;
-
-  &--close {
-    background-color: $blue_1;
-  }
-}
-
-.page-header__wrapper {
+  position: fixed;
+  z-index: 50;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background-color: $blue_1;
 }
 
 .page-header__top-menu {
   display: flex;
   justify-content: space-between;
-  padding: 26px 0 22px 0;
-
-  &--close {
-    background-color: $blue_1;
-  }
-
+  padding-top: 26px;
+  padding-bottom: 22px;
 }
 
 .page-header__logo {
   width: 100px;
 }
 
-.page-header__logo-img {
+.page-header__toggle-img-close {
   display: none;
+}
 
-  &--white {
-    display: block;
+.page-header__logo-blue {
+  display: none;
+}
+
+.page-header--scroll {
+  background-color: $white;
+}
+
+.page-header--scroll .page-header__toggle {
+  display: block;
+}
+
+.page-header--scroll .page-header__toggle-img-close {
+  display: none;
+}
+
+.page-header--scroll .page-header__toggle-img-open {
+  fill: #cccccc;
+}
+
+.page-header--scroll .page-header__logo-blue {
+  display: block;
+}
+
+.page-header--scroll .page-header__logo-white {
+  display: none;
+}
+
+.page-header--open .page-header__toggle-img-close {
+  display: block;
+}
+
+.page-header--open .page-header__toggle-img-open {
+  display: none;
+}
+
+.page-header--no-js {
+  position: relative;
+  background-color: $white;
+}
+
+.page-header--no-js .main-menu {
+  display: block;
+}
+
+.page-header--no-js .page-header__logo-blue {
+  display: block;
+}
+
+.page-header--no-js .page-header__logo-white {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &--blue {
-    display: block;
+  .page-header__top-menu {
+    align-items: center;
+    width: 52%;
+    padding-top: 45px;
+    padding-bottom: 40px;
+  }
+
+  .page-header__logo {
+    width: 170px;
   }
 }
 
-.page-header__toggle-open {
-  display: none;
+@media (min-width: $desktop-width) {
 
-  &--enable {
-    display: block;
-  }
-}
-
-.page-header__toggle-close {
-  display: none;
 }

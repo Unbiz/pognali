@@ -1,11 +1,9 @@
 .user-info {
-  padding: 50px 0 65px 0;
-  background-color: $white_2;
-  position: relative;
-  top: -30px;
-  width: 320px;
-  margin: 0 auto;
   z-index: 7;
+  margin-top: -30px;
+  padding-top: 54px;
+  padding-bottom: 62px;
+  background-color: $white_2;
 }
 
 .user-info__wrapper {
@@ -66,7 +64,7 @@
   border-radius: 20px;
   color: $blue_1;
   margin-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .user-info__tags-area {
@@ -75,8 +73,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 1px solid $gray;
-  padding: 20px 25px;
+  border: 1px solid $gray_2;
+  padding: 22px 25px;
   margin-bottom: 25px;
 }
 
@@ -104,7 +102,7 @@
   align-items: center;
   width: 100%;
   border-radius: 10px;
-  border: 1px solid $gray;
+  border: 1px solid $gray_2;
   padding: 15px;
 }
 

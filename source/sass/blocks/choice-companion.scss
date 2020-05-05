@@ -1,19 +1,14 @@
 .choice-companion {
-  background-color: $white_2;
   position: relative;
-  top: -40px;
-  width: 320px;
-  margin: 0 auto;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  z-index: 8;
-  padding-top: 44px;
-  padding-bottom: 220px;
-}
-
-.choice-companion__wrapper {
   display: flex;
   flex-direction: column;
+  z-index: 8;
+  margin-top: -20px;
+  padding-top: 44px;
+  padding-bottom: 75px;
+  background-color: $white_2;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .choice-companion__form {
@@ -24,6 +19,7 @@
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin-bottom: 8px;
 }
 
 .choice-companion__more-button {
@@ -74,3 +70,4 @@
     border-right: 1px solid $white_2;
   }
 }
+

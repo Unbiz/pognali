@@ -1,19 +1,12 @@
 .catalog-title {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  background-color: $blue_1;
-  position: relative;
-  width: 320px;
-  margin: 0 auto;
-  padding-top: 30px;
+  z-index: 10;
+  padding-top: 25px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  z-index: 10;
-}
-
-.catalog-title__wrapper {
-  display: flex;
-  justify-content: space-between;
+  background-color: $blue_1;
 }
 
 .catalog-title__title-wrapper {
@@ -25,7 +18,7 @@
 .catalog-title__title {
   font-size: 36px;
   line-height: 40px;
-  margin: 0 0 8px 0;
+  margin: 0 0 7px 0;
 }
 
 .catalog-title__title-underline {
