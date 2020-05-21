@@ -1,11 +1,48 @@
 .button {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding: 22px;
   background-color: $orange_4;
   color: $blue_4;
   font-size: 18px;
   line-height: 18px;
-  width: 270px;
-  border-radius: 8px;
+  border-radius: 10px;
+
+  &:active {
+    color: #bb923d;
+  }
+}
+
+.button span {
+  margin-right: 20px;
+}
+
+.button svg {
+  width: 10px;
+  height: 14px;
+  fill:$blue_4;
+}
+
+.button:active svg {
+  fill: #bb923d;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 28px 28px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+
+    &:hover {
+      background-color: $orange_3;
+    }
+  }
 }

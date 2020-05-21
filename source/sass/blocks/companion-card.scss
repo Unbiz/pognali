@@ -2,50 +2,62 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  background-color: $white;
-  border-radius: 10px;
+
   margin-bottom: 10px;
+
+  border-radius: 10px;
+  background-color: $white_1;
+  transition: 0.2s;
 }
 
 .companion-card__foto {
+  display: block;
   width: 100%;
   height: 270px;
+
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .companion-card__info {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   padding: 23px 23px 16px 23px;
 }
 
 .companion-card__level {
   position: absolute;
-  top: -255px;
-  left: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  top: 18px;
+  left: 18px;
   width: 60px;
   height: 60px;
+
   border-radius: 50%;
-  color: $white;
+  color: $white_1;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .companion-card__level-number {
   font-size: 24px;
   line-height: 24px;
+
   padding-top: 12px;
 }
 
 .companion-card__level-text {
+  padding: 2px;
+
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
+
   border-top: 1px solid;
-  padding: 2px;
 }
 
 .companion-card__bar {
@@ -53,60 +65,64 @@
 }
 
 .companion-card__countries {
+  @include list-default;
   position: absolute;
-  top: -12px;
   display: flex;
-  width: 224px;
+  flex-wrap: wrap;
   justify-content: center;
+  top: -12px;
+
   padding: 0;
 }
 
 .companion-card__country {
+  position: relative;
+
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .companion-card__name {
+  display: block;
+  position: relative;
+
+  margin-bottom: 16px;
+
   font-size: 21px;
   line-height: 21px;
+
   color: $blue_1;
-  margin-bottom: 16px;
   text-align: center;
-}
 
-.companion-card__name-text {
-  position: relative;
-}
+  &:active {
+    opacity: 0.3;
+  }
 
-.companion-card__name-text--online::before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  top: 12px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #81e31e;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 9px;
+    width: 5px;
+    height: 5px;
 
-.companion-card__name-text--ofline::before {
-  position: absolute;
-  left: -15px;
-  top: 12px;
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #f97676;
+    border-radius: 50%;
+    background-color: #f97676;
+  }
+
+  &--online::before {
+    background-color: #81e31e;
+  }
 }
 
 .companion-card__hashtags {
-  color: $gray;
-  font-weight: 400;
-  text-align: center;
   margin-bottom: 18px;
+  text-align: center;
+
   font-size: 16px;
+  font-weight: 400;
   line-height: 18px;
+  color: $gray_1;
 }
 
 .companion-card__transports {
@@ -117,13 +133,24 @@
 }
 
 .companion-card__transport {
+  position: relative;
   padding-left: 7px;
   padding-right: 7px;
+
+  &--active svg {
+    opacity: 0.4;
+  }
+}
+
+.companion-card__transport-text,
+.companion-card__country-text {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
   .companion-card {
     width: 286px;
+
     border-radius: 20px;
   }
 
@@ -133,25 +160,28 @@
   }
 
  .companion-card__foto {
-  height: 286px;
+    height: 286px;
   }
 
   .companion-card__countries {
     position: relative;
+    width: 100%;
+
     margin-top: -20px;
     margin-bottom: 0px;
-    width: 100%;
   }
 
   .companion-card__name {
     font-size: 24px;
     line-height: 24px;
+
     margin-bottom: 20px;
   }
 
   .companion-card__hashtags {
     font-size: 20px;
     line-height: 24px;
+
     margin-bottom: 26px;
   }
 
@@ -162,5 +192,52 @@
 }
 
 @media (min-width: $desktop-width) {
+  .companion-card {
+    margin-bottom: 0;
 
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 21px rgba(0, 0, 0, 0.1);
+   }
+ }
+
+ .companion-card__name {
+   &:hover {
+    opacity: 0.7;
+   }
+
+   &:active {
+     opacity: 0.3;
+   }
+ }
+
+.companion-card__transport:hover .companion-card__transport-text,
+.companion-card__country:hover .companion-card__country-text {
+  display: block;
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  z-index: 60;
+
+  padding: 14px 18px;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+
+  background-color: #101d41;
+  border-radius: 4px;
+  color: $white_1;
+  transform: translateX(-50%);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -16px;
+    left: calc(50% - 8px);
+
+    border: 8px solid transparent;
+    border-bottom: 8px solid #101d41;
+  }
+ }
 }

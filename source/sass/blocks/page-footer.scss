@@ -1,14 +1,20 @@
 .page-footer {
+  position: relative;
+  z-index: 15;
+
+  padding-top: 38px;
+  padding-bottom: 14px;
+  margin-top: -30px;
+
+  background-color: $white_1;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.page-footer__container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 15;
-  overflow: hidden;
-  margin-top: -30px;
-  padding-top: 35px;
-  background-color: $white;
-  border-top-right-radius: 28px;
-  border-top-left-radius: 28px;
 }
 
 .page-footer__logo {
@@ -28,8 +34,21 @@
   align-items: center;
   width: 45px;
   height: 45px;
+
   border-radius: 50%;
   background-color: $orange_4;
+
+  & svg {
+    fill: $blue_4;
+  }
+}
+
+.page-footer__social-item-link:active {
+  background-color: $blue_2;
+
+  & svg {
+    fill: #5e647c;
+  }
 }
 
 .page-footer__copyright {
@@ -37,24 +56,39 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  padding-top: 14px;
   border-top: 1px solid #f2f2f2;
 }
 
 .page-footer__copyright-text {
   font-weight: 400;
-  color: $gray;
+  color: $gray_1;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright-logo {
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: -60px;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-top: -60px;
+
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
+  }
+
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .page-footer__logo {
@@ -73,13 +107,17 @@
   .page-footer__copyright {
     align-items: center;
     width: auto;
+
+    padding-top: 0;
+
     border-top: none;
   }
 
   .page-footer__copyright-text {
+    margin-right: 20px;
+
     font-size: 20px;
     line-height: 24px;
-    margin-right: 20px;
   }
 
   .page-footer__copyright-logo {
@@ -93,9 +131,9 @@
   }
 
  .page-footer__social-vk {
-   width: 31px;
-   height: 16px;
- }
+    width: 31px;
+    height: 16px;
+  }
 
   .page-footer__social-instagram {
     width: 24px;
@@ -103,3 +141,38 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .page-footer__copyright-text {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .page-footer__social-item-link:hover {
+    background-color: $blue_2;
+
+    & svg {
+      fill: $white_1;
+    }
+  }
+
+  .page-footer__social-item-link:active {
+    & svg {
+      fill: #5e647c;
+    }
+  }
+
+  .page-footer__copyright-logo {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

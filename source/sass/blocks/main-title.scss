@@ -1,106 +1,85 @@
 .main-title {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   background-color: $blue_1;
   background-image:
-  linear-gradient($blue_2, $blue_2),
-  linear-gradient($blue_1, $blue_1),
+    linear-gradient($blue_2, $blue_2),
     url(../img/traveller-illustration-mobile@1x.png),
     url(../img/globe-back-mobile@1x.jpg);
+  background-position:
+    center 691px,
+    calc(50% + 15px) 151px,
+    center -164px;
+  background-size:
+    auto,
+    192px,
+    100% 569px;
   background-repeat: no-repeat;
-  background-position: center 765px, center 480px,  calc(50% + 15px) 222px,  center 0;
-  padding-top: 90px;
+  padding-top: 16px;
+  padding-bottom: 40px;
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .main-title {
     background-image:
       linear-gradient($blue_2, $blue_2),
-      linear-gradient($blue_1, $blue_1),
       url(../img/traveller-illustration-mobile@2x.png),
       url(../img/globe-back-mobile@2x.jpg);
-    background-size: auto, auto, 192px, 320px;
   }
-
-
 }
 
 .main-title__title {
+  display: block;
+  min-height: 340px;
   margin: 0;
-  margin-bottom: 248px;
+  margin-bottom: 28px;
   padding: 0 15px;
+
   font-size: 36px;
   line-height: 40px;
   text-align: center;
-  color: $white;
+  color: $white_1;
 }
 
-.main-title__contacts  {
-  @include list-default;
-  display: flex;
+.main-title__contacts {
   margin-bottom: 25px;
 }
 
-.main-title__contacts-item--login {
-  flex-grow: 2;
-}
-
-.main-title__contacts-item-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-
-  &--phone {
-    background-color: $orange_1;
-  }
-
-  &--email {
-    background-color: $orange_3;
-  }
-
-  &--login {
-    width: 100%;
-    background-color: $orange_4;
-    border-radius: 20px;
-    color: $blue_1;
-    font-size: 17px;
-    line-height: 30px;
-    text-transform: uppercase;
-  }
-}
-
 .main-title__review {
-  padding-left: 25px;
   width: 185px;
+  padding-left: 25px;
   margin: 0;
-  margin-bottom: 48px;
-  color: $white;
+  margin-bottom: 30px;
+
+  color: $white_1;
 }
 
-.main-title__blockquote {
+.main-title__text {
   margin: 0;
-  font-weight: 300;
   margin-bottom: 20px;
+
+  font-weight: 300;
 }
 
 .main-title__author {
-  font-style: normal;
-  font-weight: 700;
+  @include font (700, normal);
 }
 
 @media (min-width: $tablet-width) {
   .main-title {
+    padding-top: 31px;
+
     background-color: $blue_2;
     background-image:
       linear-gradient($blue_2, $blue_2),
       url(../img/traveller-illustration-tablet@1x.png),
       url(../img/globe-back-tablet@1x.jpg);
-    background-position: center 994px, calc(50% + 86px) 404px, center 382px;
-    padding-top: 158px;
+    background-position:
+      center 867px,
+      calc(50% + 86px) 277px,
+      center 255px;
+    background-size:
+      auto,
+      auto,
+      auto;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -109,31 +88,34 @@
         linear-gradient($blue_2, $blue_2),
         url(../img/traveller-illustration-tablet@2x.png),
         url(../img/globe-back-tablet@2x.jpg);
-      background-size: 768px, 372px, 1479px;
+      background-size:
+        768px,
+        372px,
+        1479px;
     }
   }
 
   .main-title__title {
+    min-height: auto;
+    margin-bottom: 38px;
+    padding: 0 140px 50px 140px;
+
     font-size: 60px;
     line-height: 70px;
-    padding: 0 140px;
-    margin-bottom: 88px;
-  }
-
-  .main-title__contacts {
-    display: none;
   }
 
   .main-title__review {
-    padding-left: 34px;
-    margin-bottom: 210px;
     width: 300px;
+    padding-left: 34px;
+    min-height: 358px;
+    margin-bottom: 40px;
   }
 
-  .main-title__blockquote {
+  .main-title__text {
+    margin-bottom: 44px;
+
     font-size: 28px;
     line-height: 33px;
-    margin-bottom: 44px;
   }
 
   .main-title__author {
@@ -144,40 +126,54 @@
 
 @media (min-width: $desktop-width) {
   .main-title {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    padding-top: 50px;
+
     background-color: $blue_1;
-    background-image: url(../img/traveller-illustration-desktop@1x.png),
-                      url(../img/globe-back-desktop@1x.jpg);
-    background-position: calc(50% + 100px) 110px,
-                        center 0px;
-    padding-top: 206px;
-    padding-bottom: 82px;
+    background-image:
+      url(../img/traveller-illustration-desktop@1x.png),
+      url(../img/globe-back-desktop@1x.jpg);
+    background-position:
+      calc(50% + 100px) bottom,
+      center bottom;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     .main-title {
-      background-image: url(../img/traveller-illustration-desktop@2x.png),
-                        url(../img/globe-back-desktop@2x.jpg);
-      background-size: 431px, 1800px;
+      background-image:
+        url(../img/traveller-illustration-desktop@2x.png),
+        url(../img/globe-back-desktop@2x.jpg);
+      background-size:
+        431px,
+        1800px;
     }
+  }
+
+  .main-title__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 48px;
+    padding-bottom: 80px;
   }
 
   .main-title__title {
     width: 480px;
     padding: 0 0 0 68px;
-    text-align: left;
     margin-bottom: 0;
+
+    text-align: left;
   }
 
   .main-title__review {
+    min-height: auto;
     width: 320px;
     margin-bottom: 0;
   }
 
-  .main-title__blockquote {
+  .main-title__text {
     margin-bottom: 44px;
   }
 }

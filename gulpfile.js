@@ -14,6 +14,8 @@ var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 var del = require("del");
 
 gulp.task("css", function () {
@@ -45,10 +47,7 @@ gulp.task("css-min", function () {
     .pipe(sourcemap.init())
     .pipe(postcss([autoprefixer()]))
     .pipe(csso())
-    .pipe(rename(function (path) {
-      path.basename += ".min";
-      path.extname = ".css";
-    }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -59,10 +58,7 @@ gulp.task("css-min-no-map", function () {
     .pipe(plumber())
     .pipe(postcss([autoprefixer()]))
     .pipe(csso())
-    .pipe(rename(function (path) {
-      path.basename += ".min";
-      path.extname = ".css";
-    }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest("build/css"));
 });
 
@@ -87,9 +83,10 @@ gulp.task("refresh", function (done){
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/sprite-*.svg")
+  .pipe(imagemin([ imagemin.svgo() ]))
   .pipe(svgstore({inlineSvg: true}))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("clean", function () {
@@ -100,7 +97,7 @@ gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive:true}),
+    imagemin.mozjpeg({progressive:true}),
     imagemin.svgo()
   ]))
   .pipe(gulp.dest("source/img"));
@@ -112,9 +109,16 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("source/img"));
 });
 
+gulp.task('js', function () {
+  return gulp.src("source/js/**/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([ include() ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
@@ -122,7 +126,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "!source/img/sprite-*.svg",
+    "!source/img/sprite*.svg",
     "source/js/**",
     "source/*.ico"
   ], {

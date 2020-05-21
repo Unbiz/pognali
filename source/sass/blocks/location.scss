@@ -1,20 +1,22 @@
 .location {
   position: relative;
-  display: flex;
-  flex-direction: column;
   z-index: 5;
+
   padding-top: 62px;
   padding-bottom: 34px;
   margin-top: -30px;
+
   border-bottom-right-radius: 28px;
   border-bottom-left-radius: 28px;
   background-color: $orange_4;
-  color: $white;
+  color: $white_1;
 }
 
 .location__tag {
   display: flex;
   align-items: center;
+
+  margin-bottom: 30px;
 }
 
 .location__tag-icon {
@@ -23,38 +25,56 @@
   align-items: center;
   width: 45px;
   height: 45px;
+
   border-radius: 50%;
   background-color: $blue_3;
+}
+
+.location__tag-icon-img {
+  width: 14px;
+  height: 22px;
+
+  fill: $orange_4;
 }
 
 .location__address-text {
   text-transform: uppercase;
   width: 150px;
+
   margin-left: 17px;
+
   color: $blue_2;
-  margin-bottom: 34px;
 }
 
 .location__link {
-  display: flex;
-  justify-content: space-between;
-  padding: 18px;
-  font-size: 18px;
-  line-height: 18px;
-  color: $blue_4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   border: 3px solid $blue_2;
-  border-radius: 10px;
+
+  &:active {
+    background-color: $blue_2;
+    color: #5e647c;
+  }
+}
+
+.location__link:active svg {
+  fill: #5e647c;
 }
 
 @media (min-width: $tablet-width) {
   .location {
     padding-top: 106px;
     padding-bottom: 80px;
-    padding-left: 75px;
-    padding-right: 75px;
     margin-top: -60px;
+
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+  }
+
+  .location__container {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   .location__tag {
@@ -68,16 +88,20 @@
 
   .location__address-text {
     width: auto;
+
     margin-bottom: 0;
     margin-left: 22px;
+
     font-size: 28px;
     line-height: 28px;
   }
 
   .location__link {
     padding: 26px 32px;
+
     font-size: 24px;
     line-height: 24px;
+
     border: 3px solid $blue_2;
     border-radius: 20px;
   }
@@ -85,11 +109,17 @@
 
 @media (min-width: $desktop-width) {
   .location {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 114px;
     padding-bottom: 54px;
+  }
+
+  .location__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .location__container {
     padding-left: 132px;
     padding-right: 132px;
   }
@@ -104,12 +134,34 @@
     height: 90px;
   }
 
+  .location__tag-icon-img {
+    width: 28px;
+    height: 43px;
+  }
+
   .location__address-text {
     margin-left: 32px;
   }
 
   .location__link {
     padding: 26px 32px;
+
+    &:hover {
+      background-color: $blue_2;
+      color: $white_1;
+    }
+
+    &:active {
+      color: #5e647c;
+    }
+  }
+
+  .location__link:hover svg {
+    fill: $white_1;
+  }
+
+  .location__link:active svg {
+    fill: #5e647c;
   }
 
   .location__text-button {

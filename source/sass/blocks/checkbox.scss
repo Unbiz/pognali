@@ -11,7 +11,12 @@
   width: 18px;
   height: 18px;
   border-radius: 4px;
-  background-color: $white;
+  background-color: $white_1;
+
+  transition: all 0.2s ease-out;
+  &::before {
+    transition: all 0.2s ease-out;
+  }
 }
 
 .checkbox input[type="checkbox"]:checked + .checkbox__indicator::before {
@@ -21,6 +26,6 @@
   width: 9px;
   height: 9px;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 8px;
 }

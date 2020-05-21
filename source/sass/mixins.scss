@@ -1,21 +1,39 @@
+@mixin font($weight, $style: normal) {
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+}
+
 @mixin list-default {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 @mixin title {
   margin: 0;
+  margin-bottom: 20px;
+
   font-size: 24px;
   line-height: 24px;
-  color: $orange_1;
   font-weight: 700;
-  margin-bottom: 20px;
+  color: $orange_1;
 }
 
 @mixin text {
   margin: 0;
-  font-weight: 300;
   margin-bottom: 20px;
+
+  font-weight: 300;
+}
+
+@mixin bar {
+  position: absolute;
+  stroke: #ff8d30;
+  stroke-dasharray: calc(2 * 3.14 * 29 * var(--persent) * 0.01) calc(2 * 3.14 * 29 * (100 - var(--persent)) * 0.01);
+  stroke-dashoffset: 45;
+  stroke-width: 3;
 }
 

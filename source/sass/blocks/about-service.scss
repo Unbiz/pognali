@@ -9,8 +9,15 @@
   border-bottom-left-radius: 30px;
 }
 
-.about-service__contant {
-  padding: 30px 25px 58px 25px;
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .about-service {
+    background-image: url(../img/about-mobile@2x.png);
+    background-size:292px 352px ;
+  }
+}
+
+.about-service__container {
+  padding: 30px 50px 58px 50px;
 }
 
 .about-service__title {
@@ -19,37 +26,75 @@
 
 .about-service__text {
   @include text;
-  color: $white;
+
+  color: $white_1;
 }
 
 .about-service__tagline {
   margin: 0;
-  color: $white;
+
+  color: $white_1;
 }
 
 .about-service__more {
-display: none;
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
   .about-service {
+    position: relative;
     padding-top: 64px;
     padding-bottom: 30px;
-    background-image: url(../img/about-tablet@1x.png);
-    background-position: 98% 105px;
+    background-image: none;
+    // background-image: url(../img/about-tablet@1x.png);
+    // background-position: calc(50% + 190px) 105px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 686px;
+      height: 213px;
+      top: 54px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      background-color: $blue_1;
+      border-radius: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: 0;
+      top: 104px;
+      left: calc(50%);
+      width: 376px;
+      height: 548px;
+      content: "";
+      background-image: url(../img/about-tablet@1x.png);
+      background-size: contain;
+    }
   }
 
-  .about-service__contant {
-    width: 360px;
-    padding-left: 34px;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .about-service::after {
+      background-image: url(../img/about-tablet@2x.png);
+      background-size: 376px 548px;
+    }
+  }
+
+  .about-service__container {
+    padding-left: 75px;
+    padding-right: 380px;
   }
 
   .about-service__title {
+    margin-bottom: 40px;
+
     font-size: 45px;
     line-height: 45px;
-    margin-bottom: 40px;
   }
 
   .about-service__text {
@@ -60,16 +105,22 @@ display: none;
 
   .about-service__tagline {
     font-size: 21px;
+
     line-height: 25px;
     margin-bottom: 54px;
   }
 
   .about-service__more {
     display: flex;
-    padding: 28px 32px;
-    font-size: 24px;
-    line-height: 24px;
-    border-radius: 20px;
+
+    width: 270px;
+  }
+
+  .about-service__more svg {
+    width: 10px;
+    height: 14px;
+
+    fill: $blue_4;
   }
 }
 
@@ -77,13 +128,34 @@ display: none;
   .about-service {
     padding-top: 98px;
     padding-bottom: 106px;
+
     background-image: url(../img/about-desktop@1x.png);
     background-position: 93% 84px;
+
+    &::before {
+      width: 208px;
+      height: 208px;
+      top: 70px;
+      left: calc(50% - 550px);
+
+      background-color: #141b3b;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
-  .about-service__contant {
-    width: 710px;
-    padding-left: 72px;
+   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+     .about-service {
+       background-image: url(../img/about-desktop@2x.png);
+       background-size: 630px 665px;
+     }
+   }
+
+  .about-service__container {
+    padding-left: 132px;
+    padding-right: 680px;
   }
 
   .about-service__title {
@@ -100,4 +172,9 @@ display: none;
     line-height: 25px;
     margin-bottom: 86px;
   }
+
+  .about-service__more {
+    width: 280px;
+  }
+
 }

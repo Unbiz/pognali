@@ -1,12 +1,13 @@
 .user-info {
   z-index: 7;
-  margin-top: -30px;
   padding-top: 54px;
   padding-bottom: 62px;
+  margin-top: -30px;
+
   background-color: $white_2;
 }
 
-.user-info__wrapper {
+.user-info__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -19,6 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 100px;
   height: 100px;
 }
@@ -26,6 +28,7 @@
 .user-info__level-number {
   font-size: 38px;
   line-height: 38px;
+
   color: $blue_4;
   border-bottom: 2px solid #cbced9;
 }
@@ -34,37 +37,53 @@
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
-  color: $gray;
+
+  color: $gray_1;
 }
 
-.user-info__level-segment {
+.user-info__bar {
+  @include bar;
   position: absolute;
-
 }
 
 .user-info__avatar {
+  overflow: hidden;
   width: 100px;
   height: 100px;
+
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .user-info__avatar-img {
   width: 100%;
 }
 
-.use-info__change-foto-button {
+.user-info__change-foto {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 40px;
   text-transform: uppercase;
   background-color: #dfe3f0;
-  height: 40px;
   border-radius: 20px;
   color: $blue_1;
+  font-size: 17px;
+  cursor: pointer;
+
   margin-top: 20px;
   margin-bottom: 30px;
+  transition: all 0.2s ease-out;
+
+  &:active {
+    & .user-info__change-foto-button {
+      opacity: 0.3;
+    }
+  }
+}
+
+.user-info__change-foto-button {
+  transition: all 0.2s ease-out;
 }
 
 .user-info__tags-area {
@@ -72,27 +91,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  border: 1px solid $gray_2;
-  padding: 22px 25px;
+
   margin-bottom: 25px;
 }
 
 .user-info__tags-title {
   position: absolute;
+  top: -9px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding-left: 15px;
-  padding-right: 15px;
-  top: -9px;
   color: $blue_4;
   background-color: $white_2;
 }
 
 .user-info__tags-text {
+  height: 90px;
+  width: 100%;
+  padding: 25px;
+
   font-weight: 400;
-  color: $gray;
+
+  color: #88888b;
+  background-color: $white_2;
+  border-radius: 10px;
+  border: 1px solid $gray_2;
+  resize: none;
+  transition: all 0.2s ease-out;
+
+  &:focus {
+    color: $gray_1;
+    border: 1px solid $blue_1;
+  }
 }
 
 .user-info__transport-area {
@@ -101,19 +135,24 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  border-radius: 10px;
-  border: 1px solid $gray_2;
+
   padding: 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid $gray_2;
 }
 
 .user-info__transport-title {
   position: absolute;
+  top: -9px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding-left: 15px;
-  padding-right: 15px;
-  top: -9px;
   color: $blue_4;
   background-color: $white_2;
 }
@@ -125,11 +164,256 @@
 }
 
 .user-info__transport {
+  margin-right: 2px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.user-info__transport-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 32px;
   height: 32px;
-  background-color: $white;
+
+  background-color: $white_1;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  & svg {
+    fill: #d9d9d9;
+    transition: all 0.2s ease-out;
+  }
+
+  &:active {
+    background-color: #e2e5f1;
+
+    & svg {
+      fill: #a3a9bd;
+    }
+  }
+}
+
+.user-info__transport-input {
+  &:checked+.user-info__transport-icon svg {
+    fill: #1d2e5b;
+  }
+
+  &:checked+.user-info__transport-icon:active svg {
+    fill: #cbced8;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-info {
+  padding-top: 124px;
+  padding-bottom: 94px;
+  margin-top: -60px;
+
+
+  }
+
+  .user-info__container {
+    justify-content: space-between;
+
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .user-info__level {
+    width: 94px;
+    height: 94px;
+  }
+
+  .user-info__avatar {
+    order: 2;
+    width: 94px;
+    height: 94px;
+
+    border-radius: 6px;
+  }
+
+  .user-info__change-foto {
+    order: 2;
+    height: 60px;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+  }
+
+  .user-info__tags-area {
+    order: 2;
+    width: 100%;
+
+    font-size: 20px;
+  }
+
+  .user-info__tags-title {
+    top: auto;
+    bottom: -8px;
+
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .user-info__tags-text {
+    height: 96px;
+
+    padding: 34px 38px;
+  }
+
+  .user-info__transport-area {
+    width: 308px;
+    height: 94px;
+
+    margin-bottom: 52px;
+  }
+
+  .user-info__transport {
+    margin-right: 8px;
+  }
+
+  .user-info__transport-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .user-info__transport-icon svg {
+    width: auto;
+    height: 21px;
+  }
+
+  .user-info__transport-title {
+    top: auto;
+    bottom: -8px;
+
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-info {
+    padding-top: 60px;
+    padding-bottom: 124px;
+  }
+
+  .user-info__container {
+    padding-left: 124px;
+    padding-right: 60px;
+  }
+
+  .user-info__level {
+    z-index: 40;
+
+    margin-top: -150px;
+    margin-left: 830px;
+  }
+
+  .user-info__level-number {
+    color: $white_1;
+  }
+
+  .user-info__level-text {
+    color: $white_1;
+  }
+
+  .user-info__avatar {
+    z-index: 40;
+    width: 190px;
+    height: 190px;
+
+    margin-top: -190px;
+    margin-right: 94px;
+
+   border-bottom-left-radius: 0;
+   border-bottom-right-radius: 0;
+  }
+
+  .user-info__transport-area {
+    order: 3;
+  }
+
+  .user-info__change-foto {
+    height: 47px;
+    width: 190px;
+
+    margin-left: 972px;
+    margin-right: auto;
+    margin-bottom: 26px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &:hover {
+      background-color: #d1d7e9;
+    }
+
+    &:active {
+      & .user-info__change-foto-button {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .user-info__change-foto-button {
+
+    & span {
+      display: none;
+    }
+  }
+
+  .user-info__tags-area {
+    width: 730px;
+    height: 92px;
+
+    margin-bottom: 0;
+  }
+
+  .user-info__transport-area {
+    width: 384px;
+
+    margin-bottom: 0;
+  }
+
+  .user-info__tags-title {
+    left: 24px;
+  }
+
+  .user-info__transport-icon {
+    &:hover {
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+
+      & svg {
+        fill: #b2b2b2;
+      }
+    }
+
+    &:active {
+      background-color: #e2e5f1;
+
+      & svg {
+        fill: #a3a9bd;
+      }
+    }
+  }
+
+  .user-info__transport-input {
+    &:checked+.user-info__transport-icon:hover svg {
+      fill: #101e44;
+    }
+
+    &:checked+.user-info__transport-icon:active svg {
+      fill: #cbced8;
+    }
+  }
 }

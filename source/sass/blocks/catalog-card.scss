@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-color: $white;
+  background-color: $white_1;
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -52,7 +52,7 @@
 }
 
 .catalog-card__hashtags {
-  color: $gray;
+  color: $gray_1;
   font-weight: 400;
   margin-bottom: 11px;
   margin-left: 8px;
@@ -93,14 +93,14 @@
 .catalog-card__country-list-title-text {
   display: inline;
   font-weight: 400;
-  color: $gray;
+  color: $gray_1;
   font-size: 15px;
   line-height: 18px;
   text-transform: lowercase;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $white;
+  background-color: $white_1;
 }
 
 .catalog-card__country-list-title {
@@ -159,14 +159,14 @@
 .catalog-card__transport-title-text {
   display: inline;
   font-weight: 400;
-  color: $gray;
+  color: $gray_1;
   font-size: 15px;
   line-height: 18px;
   text-transform: lowercase;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $white;
+  background-color: $white_1;
 }
 
 .catalog-card__level {
@@ -179,14 +179,14 @@
 .catalog-card__level-title-text {
   display: inline;
   font-weight: 400;
-  color: $gray;
+  color: $gray_1;
   font-size: 15px;
   line-height: 18px;
   text-transform: lowercase;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $white;
+  background-color: $white_1;
 }
 
 .catalog-card__level-block {

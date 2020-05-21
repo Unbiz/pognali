@@ -1,22 +1,52 @@
 .companions {
+  position: relative;
   z-index: 8;
+
   padding-top: 100px;
   padding-bottom: 30px;
-  background-position: 150px 70px, -10px 340px;
   margin-top: -30px;
-  border-bottom-right-radius: 28px;
-  border-bottom-left-radius: 28px;
+
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   background-color: $blue_2;
-  background-image: url(../img/smolov-back-desktop@1x.png),
-                    url(../img/rogovaya-back-mobile@1x.png);
+  background-image:
+    url(../img/smolov-back-desktop@1x.png),
+    url(../img/rogovaya-back-mobile@1x.png);
+  background-position:
+    calc(50% + 60px) 70px,
+    calc(50% - 140px) 340px;
   background-repeat: no-repeat;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 68px;
+    left: calc(50% - 180px);
+    z-index: -1;
+    width: 130px;
+    height: 130px;
+    border-radius: 20px;
+    background-color: #141b3b;
+  }
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .companions {
+    background-image:
+    url(../img/smolov-back-desktop@2x.png),
+    url(../img/rogovaya-back-mobile@2x.png);
+    background-size:
+      143px 143px,
+      71px 71px;
+  }
 }
 
 .companions__info {
   position: relative;
+
+  width: 240px;
   margin-bottom: 58px;
   padding-left: 25px;
-  width: 240px;
 }
 
 .companoins__title {
@@ -29,102 +59,145 @@
   @include text;
   margin: 0;
   margin-bottom: 20px;
-  color: $white;
+
+  color: $white_1;
 }
 
 .conpanions__slogan {
-  color: $white;
+  color: $white_1;
 }
 
 .companions__cards {
+  position: relative;
   @include list-default;
   display: flex;
   flex-direction: column;
+
   margin-bottom: 10px;
+}
+
+.companions__show-all svg {
+  fill: #1d2e5b;
 }
 
 @media (min-width: $tablet-width) {
   .companions {
     padding-top: 198px;
     padding-bottom: 88px;
-    padding-left: 74px;
-    padding-right: 74px;
     background-position: 150px 70px, -10px 340px;
     margin-top: -60px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
-    background-image: url(../img/smolov-back-tablet@1x.png),
-                      url(../img/rogovaya-back-tablet@1x.png);
+    background-image:
+      url(../img/smolov-back-desktop@1x.png),
+      url(../img/rogovaya-back-desktop@1x.png);
+    background-position:
+      calc(50% - 270px) 480px,
+      calc(50% + 170px) 140px;
+
+    &::before {
+      top: 140px;
+      left: calc(50% - 340px);
+      width: 210px;
+      height: 210px;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    .companions {
+      background-image:
+        url(../img/smolov-back-desktop@2x.png),
+        url(../img/rogovaya-back-desktop@2x.png);
+      background-size:
+        143px 143px,
+        190px 190px;
+    }
+  }
+
+  .companions__container {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   .companions__cards {
     flex-direction: row;
     justify-content: space-between;
+
     margin-bottom: 70px;
   }
 
   .companions__info {
+    width: 450px;
+
     margin-bottom: 60px;
     padding-left: 0;
-    width: 450px;
   }
 
   .companoins__title {
+    margin-bottom: 56px;
+
     font-size: 45px;
     line-height: 45px;
-    margin-bottom: 56px;
   }
 
   .companions__text {
+    margin-bottom: 40px;
+
     font-size: 28px;
     line-height: 33px;
-    margin-bottom: 40px;
   }
 
   .conpanions__slogan {
     font-size: 21px;
     line-height: 25px;
   }
-
-  .companions__show-all {
-    padding: 29px 32px;
-    font-size: 24px;
-    line-height: 24px;
-    border-radius: 20px;
-    width: 100%;
-  }
 }
 
 @media (min-width: $desktop-width) {
   .companions {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 810px;
     padding-top: 184px;
-    padding-bottom: 80px;
+    padding-bottom: 130px;
+    background-position:
+      calc(50% - 100px) 200px,
+      calc(50% - 390px) 440px;
+
+    &::before {
+      top: 130px;
+      left: calc(50% - 660px);
+    }
+  }
+
+  .companions__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     padding-left: 60px;
     padding-right: 60px;
-    background-position: 150px 70px, -10px 340px;
-    background-image: url(../img/smolov-back-desktop@1x.png),
-      url(../img/rogovaya-back-desktop@1x.png);
   }
 
   .companions__info {
     width: 520px;
+
     padding-left: 70px;
-    margin-bottom: 88px;
+    margin-bottom: 80px;
   }
 
   .companions__cards {
-    order: 3;
+    width: 630px;
+
     margin-top: 10px;
-    margin-left: 110px;
+    margin-bottom: 0;
   }
 
-   .companions__show-all {
-     order: 1;
-     width: 280px;
-     margin-left: 70px;
-   }
+  .companions__show-all {
+    z-index: 10;
+    order: 2;
+    width: 280px;
+    height: 80px;
+
+    margin-top: -80px;
+    margin-left: 70px;
+  }
 }
