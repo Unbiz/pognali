@@ -26,8 +26,7 @@
                 srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
-              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x"
-                alt="Логотип Погнали">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
 
               <source media="(min-width: 1440px)"
                 srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
@@ -42,8 +41,7 @@
                 srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
-              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x"
-                alt="Логотип Погнали">
+              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
 
               <source media="(min-width: 1440px)"
                 srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
@@ -137,6 +135,7 @@
     </section>
 
     <section class="user-info">
+      <h2 class="visually-hidden">Информация о пользователе</h2>
       <div class="user-info__container container">
         <div class="user-info__level">
           <span class="user-info__level-number">80</span>
@@ -158,7 +157,7 @@
         </div>
         <label class="user-info__change-foto">
           <input class="user-info__change-foto-input visually-hidden" type="file">
-          <span class="user-info__change-foto-button"><span>Сменить&nbsp</span>фото</span>
+          <span class="user-info__change-foto-button"><span>Сменить </span>фото</span>
         </label>
         <label class="user-info__tags-area">
           <span class="user-info__tags-title">Тэги</span>
@@ -255,7 +254,7 @@
             <li class="new-plan__title-dots-item"></li>
           </ul>
         </div>
-        <form action="" class="new-plan__form">
+        <form class="new-plan__form">
           <fieldset class="new-plan__step step">
             <div class="step__footer">
               <div class="step__footer-wrapper">
@@ -281,33 +280,33 @@
                   <button class="step__find-number step__find-number--minus" type="button" aria-label="Меньше">
                     <picture>
                       <source media="(min-width: 768px)" srcset="img/qty-minus.svg">
-                      <img src="img/qty-minus-mobile.svg" width="14" height="14">
+                      <img src="img/qty-minus-mobile.svg" width="14" height="14" alt="minus">
                     </picture>
                   </button>
                   <input class="step__find-number-input" id="companions" value="2"></input>
                   <button class="step__find-number step__find-number--plus" type="button" aria-label="Больше">
                     <picture>
                       <source media="(min-width: 768px)" srcset="img/qty-plus.svg">
-                      <img src="img/qty-plus-mobile.svg" width="14" height="14">
+                      <img src="img/qty-plus-mobile.svg" width="14" height="14" alt="plus">
                     </picture>
                   </button>
                 </div>
                 <span class="step__find-text-after">чел.</span>
               </div>
               <div class="step__find-companions-text step__find-companions-text--second">
-                <label for="companions" class="step__find-text-before">Длительность:</label>
+                <label for="time" class="step__find-text-before">Длительность:</label>
                 <div class="step__find-number-block">
                   <button class="step__find-number step__find-number--minus" type="button" aria-label="Меньше">
                     <picture>
                       <source media="(min-width: 768px)" srcset="img/qty-minus.svg">
-                      <img src="img/qty-minus-mobile.svg" width="14" height="14">
+                      <img src="img/qty-minus-mobile.svg" width="14" height="14" alt="minus">
                     </picture>
                   </button>
-                  <input class="step__find-number-input" id="companions" value="2"></input>
+                  <input class="step__find-number-input" id="time" value="2"></input>
                   <button class="step__find-number step__find-number--plus" type="button" aria-label="Больше">
                     <picture>
                       <source media="(min-width: 768px)" srcset="img/qty-plus.svg">
-                      <img src="img/qty-plus-mobile.svg" width="14" height="14">
+                      <img src="img/qty-plus-mobile.svg" width="14" height="14" alt="plus">
                     </picture>
                   </button>
                 </div>
@@ -322,11 +321,11 @@
             <div class="step__find-calendar">
               <div class="step__find-calendar-month">
                 <button class="step__find-calendar-button step__find-calendar-button--back" type="button" aria-label="Предыдущий месяц">
-                  <img src="img/month-arrow-left.svg" width="9" height="18">
+                  <img src="img/month-arrow-left.svg" width="9" height="18" alt="left">
                 </button>
                 <div class="find__calendar-month-name">Март 2019</div>
                 <button class="step__find-calendar-button step__find-calendar-button--forward" type="button" aria-label="Следующий месяц">
-                  <img src="img/month-arrow-right.svg" width="9" height="18">
+                  <img src="img/month-arrow-right.svg" width="9" height="18" alt="right">
                 </button>
               </div>
               <table class="step__calendar calendar">
@@ -725,7 +724,7 @@
                 <li class="step__route-item step__route-item--add">
                   <div class="step__route-country step__route-country--add">
                     <button class="step__route-country-name" type="button" name="add-country">Добавить страну</button>
-                    <img src="img/qty-plus-mobile.svg" alt="" class="step__route-country-plus" width="14" height="14">
+                    <img src="img/qty-plus-mobile.svg" alt="plus" class="step__route-country-plus" width="14" height="14">
                   </div>
                 </li>
               </ul>
@@ -768,7 +767,7 @@
                   <div class="step__fun-country">Босния и Герцеговина</div>
                   <img src="img/flag-bosnia.svg" alt="Flag" class="step__fun-flag" width="36" height="24">
                 </div>
-                <textarea name="fun-plan1" id="" cols="18" rows="12" placeholder="План действий" class="step__fun-area"  required></textarea>
+                <textarea name="fun-plan1" cols="18" rows="12" placeholder="План действий" class="step__fun-area"  required></textarea>
                 <span></span>
               </div>
               <div class="step__fun-block">
@@ -776,7 +775,7 @@
                   <div class="step__fun-country">Чехословакия</div>
                   <img src="img/flag-czech.svg" alt="Flag" class="step__fun-flag" width="36" height="24">
                 </div>
-                <textarea name="fun-plan1" id="" cols="18" rows="12" placeholder="План действий" class="step__fun-area" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <textarea name="fun-plan1" cols="18" rows="12" placeholder="План действий" class="step__fun-area" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 <span></span>
               </div>
             </div>
