@@ -15,7 +15,7 @@ var webp = require("gulp-webp");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var htmlmin = require("gulp-htmlmin");
-var uglify = require("gulp-uglify");
+var uglify = require("gulp-uglify-es").default;
 var del = require("del");
 
 gulp.task("css", function () {
@@ -74,6 +74,7 @@ gulp.task("server", function () {
   gulp.watch("source/css/*.css", gulp.series("css-min"));
   gulp.watch("source/img/sprite-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
 });
 
 gulp.task("refresh", function (done){
@@ -135,6 +136,6 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "css-min", "sprite", "html"));
-gulp.task("build-no-map", gulp.series("clean", "copy", "css-no-map", "css-min-no-map", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "css-min", "sprite", "html", "js"));
+gulp.task("build-no-map", gulp.series("clean", "copy", "css-no-map", "css-min-no-map", "sprite", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));

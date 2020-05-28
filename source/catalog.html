@@ -19,7 +19,7 @@
 
     <div class="page-header__container container">
       <div class="page-header__top-menu">
-        <a href="#" class="page-header__logo">
+        <a href="index.html" class="page-header__logo">
           <div class="page-header__logo-white">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
@@ -62,13 +62,13 @@
       </div>
       <ul class="page-header__list">
         <li class="page-header__list-item">
-          <a data-hover="О сервисе">О сервисе</a>
+          <a href="index.html" data-hover="О сервисе">О сервисе</a>
         </li>
         <li class="page-header__list-item">
           <a href="form.html" data-hover="Направления">Направления</a>
         </li>
         <li class="page-header__list-item">
-          <a href="catalog.html" data-hover="Попутчики">Попутчики</a>
+          <a href="#" data-hover="Попутчики">Попутчики</a>
         </li>
       </ul>
       <a class="page-header__login" href="#">Авторизация</a>
@@ -668,8 +668,18 @@
             </div>
           </li>
           <li class="choice-companion__card catalog-card">
-            <a href="#">
-              <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="catalog-card__foto">
+            <a class="catalog-card__foto" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/demin-desktop@1x.webp, img/demin-destop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/demin-tablet@1x.webp, img/demin-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/demin-mobile@1x.webp, img/demin-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-destop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="imgdemina-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
+                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70"
+                  alt="Фотография - Петя Демин">
+              </picture>
             </a>
             <a href="#">
               <h3 class="catalog-card__name catalog-card__name--ofline">Петя Демин</h3>
@@ -745,8 +755,18 @@
             </div>
           </li>
           <li class="choice-companion__card catalog-card">
-            <a href="#">
-              <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="catalog-card__foto">
+            <a class="catalog-card__foto" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/smolov-desktop@1x.webp, img/smolov-destop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/smolov-tablet@1x.webp, img/smolov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/smolov-mobile@1x.webp, img/smolov-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg, img/smolov-destop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x">
+                <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70"
+                  alt="Фотография - Марк Смолов">
+              </picture>
             </a>
             <a href="#">
               <h3 class="catalog-card__name catalog-card__name--ofline">Марк Смолов</h3>
@@ -828,8 +848,18 @@
             </div>
           </li>
           <li class="choice-companion__card catalog-card">
-            <a href="#">
-              <img src="img/firsova-mobile@1x.jpg" alt="Foto" class="catalog-card__foto">
+            <a class="catalog-card__foto" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/rogovaya-desktop@1x.webp, img/rogovaya-destop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/rogovaya-tablet@1x.webp, img/rogovaya-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp, img/rogovaya-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg, img/rogovaya-destop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x">
+                <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70"
+                  alt="Фотография - Лариса Роговая">
+              </picture>
             </a>
             <a href="#">
               <h3 class="catalog-card__name catalog-card__name--ofline">Лариса Роговая</h3>
@@ -1151,6 +1181,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 

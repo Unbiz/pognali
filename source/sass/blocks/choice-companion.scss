@@ -184,7 +184,13 @@
 
     border-radius: 50%;
 
+    transition: 0.2s all ease-out;
+
     &--active {
+      background-color: $orange_4;
+    }
+
+    &:active {
       background-color: $orange_4;
     }
   }
@@ -217,6 +223,14 @@
 
     margin-right: auto;
     margin-bottom: 70px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .choice-companion__more-button-text {
@@ -225,5 +239,30 @@
 
   .choice-companion__cards-list {
     margin-bottom: 34px;
+  }
+
+  .choice-companion__page-arrow-link {
+
+    &:hover {
+      & svg {
+        opacity: 0.6;
+      }
+    }
+
+     &:active {
+       & svg {
+         opacity: 0.3;
+       }
+     }
+  }
+
+  .choice-companion__page-list-item {
+    &:hover {
+      color: rgba($color: $blue_4, $alpha: 0.6);
+    }
+
+    &:active {
+      background-color: $orange_4;
+    }
   }
 }
