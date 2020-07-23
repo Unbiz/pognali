@@ -90,6 +90,10 @@
 
 .page-header__list-item {
   text-align: center;
+
+  & a {
+    transition: 0.2s all ease-out;
+  }
 }
 
 .page-header__list-item a:active {
@@ -122,6 +126,8 @@
   background-color: $blue_3;
   border-radius: 50%;
 
+  transition: 0.2s all ease-out;
+
   &:active .page-header__contacts-item-icon {
     opacity: 0.3;
   }
@@ -149,6 +155,8 @@
 
   background-color: $orange_4;
   border-radius: 25px;
+
+  transition: 0.2s all ease-out;
 
   &:active {
     color: rgba($color: $blue_1, $alpha: 0.3);
