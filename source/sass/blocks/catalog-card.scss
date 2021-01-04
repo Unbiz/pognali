@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-color: $white;
+  background-color: $white_1;
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -13,7 +13,14 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.catalog-card__foto img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .catalog-card__name {
@@ -23,6 +30,12 @@
   color: $blue_1;
   margin: 0;
   margin-left: 16px;
+
+  transition: 0.2s all ease-out;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-card__name--online {
@@ -52,7 +65,7 @@
 }
 
 .catalog-card__hashtags {
-  color: $gray;
+  color: $gray_1;
   font-weight: 400;
   margin-bottom: 11px;
   margin-left: 8px;
@@ -82,7 +95,7 @@
   font-weight: 500;
   color: $blue_1;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   align-items: center;
 }
 
@@ -93,14 +106,14 @@
 .catalog-card__country-list-title-text {
   display: inline;
   font-weight: 400;
-  color: $gray;
+  color: $gray_1;
   font-size: 15px;
   line-height: 18px;
   text-transform: lowercase;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $white;
+  background-color: $white_1;
 }
 
 .catalog-card__country-list-title {
@@ -139,6 +152,14 @@
   height: 32px;
   border-radius: 50%;
   background-color: $white_2;
+
+  &--active svg {
+    opacity: 0.15;
+  }
+}
+
+.catalog-card__transport-item {
+  fill: $blue_2;
 }
 
 .catalog-card__transport-title {
@@ -159,14 +180,14 @@
 .catalog-card__transport-title-text {
   display: inline;
   font-weight: 400;
-  color: $gray;
+  color: $gray_1;
   font-size: 15px;
   line-height: 18px;
   text-transform: lowercase;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $white;
+  background-color: $white_1;
 }
 
 .catalog-card__level {
@@ -179,14 +200,14 @@
 .catalog-card__level-title-text {
   display: inline;
   font-weight: 400;
-  color: $gray;
+  color: $gray_1;
   font-size: 15px;
   line-height: 18px;
   text-transform: lowercase;
   position: relative;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: $white;
+  background-color: $white_1;
 }
 
 .catalog-card__level-block {
@@ -234,7 +255,13 @@
   color: $blue_1;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 20px
+  border-radius: 20px;
+  transition: 0.2s all ease-out;
+
+  &:active {
+    color: rgba($color: $blue_1, $alpha: 0.3);
+    background-color: $orange_3;
+  }
 }
 
 .catalog-card__heart {
@@ -246,8 +273,48 @@
   height: 30px;
   border-radius: 50%;
   background-color: $white_2;
-  top: 55px;
-  left: 70px;
+  top: 54px;
+  left: 68px;
+
+  border: none;
+  cursor: pointer;
+
+  transition: 0.2s all ease-out;
+
+  & svg {
+    opacity: 0.6;
+
+    transition: 0.2s all ease-out;
+  }
+
+  & .catalog-card__heart-img-active {
+    display: none;
+  }
+
+  &:active {
+    background-color: #e2e5f2;
+
+    & svg {
+      opacity: 0.3;
+    }
+  }
+
+  &--active {
+    background-color: #f9eaea;
+
+    &:active {
+      background-color: #f9d8d8;
+    }
+
+    & .catalog-card__heart-img-active {
+      opacity: 1;
+      display: block;
+    }
+
+    & .catalog-card__heart-img {
+      display: none;
+    }
+  }
 }
 
 .catalog-card__subscribe {
@@ -257,4 +324,357 @@
   color: $blue_1;
   top: 60px;
   left: 105px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card {
+    padding: 35px;
+    margin-bottom: 42px;
+  }
+
+  .catalog-card__foto {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 20px;
+  }
+
+  .catalog-card__name {
+    position: relative;
+    font-size: 30px;
+    line-height: 30px;
+    color: $blue_4;
+    width: auto;
+    margin-left: 34px;
+
+    &::before {
+      top: 14px;
+      right: -28px;
+    }
+  }
+
+  .catalog-card__hashtags {
+    order: 2;
+  }
+
+  .catalog-card__country-list-wrapper {
+    order: 2;
+  }
+
+  .catalog-card__transport-wrapper {
+    order: 1;
+  }
+
+  .catalog-card__level {
+    order: 2;
+  }
+
+  .catalog-card__transport-title {
+    display: none;
+  }
+
+  .catalog-card__transport-wrapper {
+    margin-left: auto;
+  }
+
+  .catalog-card__transports-list {
+    flex-direction: column;
+
+    margin: 0;
+  }
+
+  .catalog-card__transport-item {
+    background-color: transparent;
+  }
+
+  .catalog-card__transport-icon {
+    width: auto;
+    height: 21px;
+  }
+
+  .catalog-card__hashtags {
+    width: 230px;
+    margin-left: 226px;
+    margin-right: auto;
+    margin-top: -156px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .catalog-card__activity {
+    order: 2;
+    display: flex;
+    align-items: center;
+
+    width: auto;
+
+    margin-left: 226px;
+    margin-top: -70px;
+  }
+
+  .catalog-card__country-list-wrapper {
+    order: 4;
+  }
+
+  .catalog-card__go-button {
+    width: auto;
+
+    height: 50px;
+    padding: 0 32px;
+
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 700;
+
+    border-radius: 25px;
+  }
+
+  .catalog-card__heart {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    width: 50px;
+    height: 50px;
+
+    margin-right: 10px;
+
+    & svg {
+      width: 20px;
+      height: 17px;
+    }
+  }
+
+  .catalog-card__subscribe {
+    position: relative;
+    top: auto;
+    left: auto;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    white-space: nowrap;
+  }
+
+  .catalog-card__level {
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-top: -64px;
+  }
+
+  .catalog-card__level-title {
+    display: none;
+  }
+
+  .catalog-card__level-block {
+    display: flex;
+    flex-direction: column;
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0;
+  }
+
+  .catalog-card__level-text {
+    display: block;
+
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+
+    color: #c8c8c8;
+
+    border-top: 1px solid #c8c8c8;
+  }
+
+  .catalog-card__country-list-wrapper {
+    margin-top: 8px;
+  }
+
+  .catalog-card__country-list-title {
+    &::before {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .catalog-card__country-list-title-text {
+    margin-left: 38px;
+  }
+
+  .catalog-card__country-list {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0;
+    margin-top: 6px;
+  }
+
+  .catalog-card__country-item {
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-right: 26px;
+    margin-bottom: 0;
+  }
+
+  .catalog-card__country-img {
+    width: 35px;
+    height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-card {
+    justify-content: start;
+
+    width: 950px;
+
+    padding: 0;
+    margin-bottom: 30px;
+
+    transition: 0.2s all ease-out;
+
+    &:hover {
+      box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+
+      & .catalog-card__foto img {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+
+  .catalog-card__foto {
+    width: 285px;
+    height: 100%;
+
+    margin: 0;
+
+    border-radius: 0;
+
+    & img {
+      display: block;
+
+      transition: 0.2s all ease-out;
+    }
+  }
+
+  .catalog-card__name {
+    margin-left: 60px;
+    margin-top: 46px;
+
+    &::before {
+      right: auto;
+      left: -24px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .catalog-card__country-list-wrapper {
+    order: 1;
+    width: auto;
+
+    margin-left: auto;
+    margin-top: 48px;
+    margin-right: 76px;
+  }
+
+  .catalog-card__country-list-title {
+    display: none;
+  }
+
+  .catalog-card__country-list {
+    flex-direction: column;
+
+    margin-top: 0;
+
+    width: 200px;
+
+  }
+
+  .catalog-card__country-item {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .catalog-card__country-name {
+    margin-left: 18px;
+  }
+
+  .catalog-card__transport-wrapper {
+    order: 4;
+    margin-top: -86px;
+    margin-left: auto;
+  }
+
+  .catalog-card__transports-list {
+    flex-direction: row;
+  }
+
+  .catalog-card__hashtags {
+    margin-left: 345px;
+    margin-top: -190px;
+  }
+
+  .catalog-card__activity {
+    margin-left: 345px;
+    margin-top: -140px;
+  }
+
+  .catalog-card__level {
+    order: 8;
+
+    margin-right: 44px;
+    margin-top: -100px;
+    margin-left: 46px;
+  }
+
+  .catalog-card__go-button {
+    &:hover {
+      background-color: $orange_3;
+    }
+
+    &:active {
+      color: rgba($color: $blue_1, $alpha: 0.3);
+      background-color: $orange_3;
+    }
+  }
+
+  .catalog-card__heart {
+
+    &:hover {
+      background-color: #e2e5f2;
+
+      & svg {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      & svg {
+        opacity: 0.3;
+      }
+    }
+
+    &--active {
+
+      &:hover {
+        background-color: #f9d8d8;
+      }
+
+      &:active {
+        background-color: #f9d8d8;
+      }
+    }
+  }
 }

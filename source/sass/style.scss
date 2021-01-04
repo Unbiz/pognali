@@ -1,43 +1,19 @@
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
+@import 'scaffolding';
 
-body {
-  font-family: 'Bloggersans', sans;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  color: $white;
-  background-position: top center;
-  background-repeat: no-repeat;
-  margin: 0;
-  position: relative;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.page-main {
-  position: relative;
-}
-
+@import 'blocks/container.scss';
 @import 'blocks/button';
-@import 'blocks/wrapper';
-@import 'blocks/visually-hidden';
 @import 'blocks/checkbox';
 @import 'blocks/page-header';
-@import 'blocks/main-menu';
+@import 'blocks/contacts';
+@import 'blocks/page-main';
 @import 'blocks/main-title';
 @import 'blocks/roadmap';
 @import 'blocks/about-service';
 @import 'blocks/directions';
+@import 'blocks/country-card';
 @import 'blocks/companions';
 @import 'blocks/companion-card';
 @import 'blocks/add-profile';
@@ -57,3 +33,4 @@ img {
 @import 'blocks/new-plan';
 @import 'blocks/step';
 @import 'blocks/calendar';
+

@@ -1,41 +1,56 @@
 .add-profile {
-  padding: 80px 0 34px 0;
-  background-color: $white_2;
   position: relative;
-  top: -90px;
-  width: 320px;
-  margin: 0 auto;
-  border-bottom-right-radius: 28px;
-  border-bottom-left-radius: 28px;
   z-index: 7;
-}
 
-.add-profile__wrapper {
-  position: relative;
+  padding-top: 80px;
+  padding-bottom: 34px;
+  margin-top: -30px;
+
+  background-color: $white_2;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .add-profile__container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-left: 25px;
+
+  padding-left: 50px;
+  padding-right: 25px;
 }
+
+.add-profile__container::before {
+  position: absolute;
+  top: -10px;
+  right: 26px;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  content: "";
+  background-image: url(../img/rates@1x.png);
+  background-size: contain;
+}
+
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .add-profile__container::before {
+    background-image: url(../img/rates@2x.png);
+  }
+}
+
 
 .add-profile__title {
   @include title;
   width: 110px;
-  margin-bottom: 44px;
-}
 
-.add-profile__title-img {
-  position: absolute;
-  top: -15px;
-  right: 0px;
+  margin-bottom: 44px;
 }
 
 .add-profile__features-list {
   @include list-default;
   display: flex;
   flex-direction: column;
+
   margin-bottom: 26px;
 }
 
@@ -62,24 +77,30 @@
 }
 
 .add-profile__feature-note {
+  width: 200px;
+
   padding-top: 11px;
   padding-bottom: 11px;
-  width: 200px;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
-  color: $gray;
+
+  color: $gray_1;
   border-top: 1px solid #e1e3e9;
 }
 
 .add-profile__feature-number {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+    width: 34px;
+  height: 34px;
+
   margin: 3px;
+
+  border-radius: 50%;
+  color: $white_1;
 }
 
 .add-profile__user-icon {
@@ -89,5 +110,190 @@
 .add-profile__show-business-text {
   font-size: 16px;
   line-height: 16px;
+
   color: $blue_2;
 }
+
+@media (min-width: $tablet-width) {
+  .add-profile {
+    padding-top: 130px;
+    padding-bottom: 66px;
+    margin-top: -60px;
+
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+
+  .add-profile__container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .add-profile__container::before {
+    top: auto;
+    bottom: -20px;
+    right: 90px;
+  }
+
+  .add-profile__title {
+    width: 100%;
+
+    margin-bottom: 76px;
+
+    text-align: center;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .add-profile__features-list {
+    position: relative;
+
+    margin-right: 34px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -35px;
+      top: -40px;
+      width: 200px;
+      height: 280px;
+
+      border-radius: 20px;
+
+      background-color: $gray_3;
+    }
+  }
+
+  .add-profile__feature-block {
+    position: relative;
+    flex-direction: row;
+    justify-content: start;
+    z-index: 9;
+  }
+
+  .add-profile__feature-note {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 2;
+
+    margin-left: 10px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .add-profile__feature-number {
+    width: 68px;
+    height: 68px;
+
+    margin: 0;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .add-profile__text {
+    margin-left: 12px;
+  }
+
+  .add-profile__show-business {
+    display: flex;
+    align-items: center;
+  }
+
+  .add-profile__user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+
+    border-radius: 50%;
+    margin-right: 22px;
+
+    background-color: $gray_3;
+  }
+
+  .add-profile__user-icon:active svg {
+    opacity: 0.3;
+  }
+
+  .add-profile__user-icon svg {
+    fill: $blue_2;
+  }
+
+  .add-profile__show-business-text {
+    font-size: 20px;
+    line-height: 20px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-profile {
+    padding-top: 162px;
+    padding-bottom: 166px;
+  }
+
+  .add-profile__container {
+    padding-left: 132px;
+    padding-right: 132px;
+  }
+
+  .add-profile__container::before {
+    width: 200px;
+    height: 200px;
+    button: auto;
+    top: 185px;
+    right: 130px;
+  }
+
+  .add-profile__title {
+    margin-bottom: 136px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .add-profile__features-list {
+    margin-right: 270px;
+    margin-bottom: 30px;
+
+    &::after {
+      width: 446px;
+      height: 300px;
+      top: -48px;
+      right: -160px;
+    }
+  }
+
+  .add-profile__show-business-text {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .add-profile__user-icon svg {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+

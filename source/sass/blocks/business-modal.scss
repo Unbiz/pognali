@@ -1,47 +1,52 @@
-.business-modal {
+.busines-modal {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 70px;
-  background-color: $white;
-  border-radius: 15px;
-  z-index: 77;
-  width: 270px;
   overflow: hidden;
-}
+  z-index: 200;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 270px;
 
-.busines-modal__wrapper {
-  display: none;
-  width: 320px;
   margin: 0 auto;
 
-  &--show {
-    display: block;
+  background-color: $white_1;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+
+  &--close {
+    display: none;
   }
 }
 
 .business-modal__title {
   @include title;
-  text-align: center;
+
   padding: 30px;
   margin: 0;
+
+  text-align: center;
 }
 
 .businass-modal__features-list {
   @include list-default;
-  font-weight: 300;
-  color: $gray;
   padding-left: 26px;
   padding-right: 26px;
   margin-bottom: 34px;
+
+  font-weight: 300;
+  color: $gray_1;
 }
 
 .business-modal__feature {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid #f2f2f2;
+
   padding-top: 11px;
   padding-bottom: 11px;
+
+  border-top: 1px solid #f2f2f2;
 
   &:last-child {
     border-bottom: 1px solid #f2f2f2;
@@ -49,11 +54,79 @@
 }
 
 .business-modal__close-button {
+  padding: 15px;
+
   font-size: 16px;
   line-height: 24px;
+
   text-transform: uppercase;
   color: $blue_2;
   text-align: center;
-  padding: 15px;
   background-color: #f3f4f8;
+
+  &:active {
+    color: #aeb5c7;
+    background-color: #edeff6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .busines-modal {
+    top: 270px;
+    width: 686px;
+
+    border-radius: 30px;
+  }
+
+  .business-modal__title {
+    margin-bottom: 25px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .businass-modal__features-list {
+    padding-left: 90px;
+    padding-right: 90px;
+    margin-bottom: 50px;
+
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .business-modal__feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .business-modal__close-button {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-transform: none;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .busines-modal {
+    top: 200px;
+    width: 750px;
+  }
+
+  .businass-modal__features-list {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .business-modal__close-button {
+    &:hover {
+      background-color: #edeff6;
+    }
+
+    &:active {
+      color: #aeb5c7;
+    }
+  }
 }
